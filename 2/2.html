@@ -2,328 +2,555 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="slick/slick.css">
-	<link rel="stylesheet" href="slick/slick-theme.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">		
+	<title>Trekking</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
 </head>
 <body>
-	<header class="header">
-		<h3>clemo.</h3>
-		<div class="burger">
-			<span class="slick_nav nav1"></span>
-			<span class="slick_nav nav2"></span>
-			<span class="slick_nav nav3"></span>
+	<header>
+		<div class="header-top">
+			<div class="header-top-logo">
+				<img src="images/shoe.png" alt="logo">
+			</div>
+			<div class="header-top-nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#"><img src="images/shopping-cart.png" alt=""></a></li>
+				</ul>
+			</div>
 		</div>
-		<nav class="nav">
-			<ul class="menu">
-				<li class="menu__item"><a class="menu__link" href="">about us</a></li>
-				<li class="menu__item"><a class="menu__link" href="">services</a></li>
-				<li class="menu__item"><a class="menu__link" href="">works</a></li>
-				<li class="menu__item"><a class="menu__link" href="">blog</a></li>
-				<li class="menu__item"><a class="menu__link" href="">contact</a></li>
-			</ul>
-		</nav>
+		<div class="header-text">
+			<h1>Our clothing , your comfort</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br>do eiusmod tempor incididunt ut labore et dolore<br>magna   
+			 aliqua.</p>	
+			<a href="#arrow" class="bottom"></a>			
+		</div>
 	</header>
-	<div class="carousel-box">
-		<div class="carousel">
-			<div class="carousel__slider">
-				<div class="slider__content">
-					<h2>we are clemo.</h2>
-					<p>professionals<br> in the creative industries</p>	
-					<div class="header-button"><a href="" class="header-button__link">get in touch</a></div>
-				</div>
-			</div>
-			<div class="carousel__slider">
-				<div class="slider__content">
-					<h2>we are clemo.</h2>
-					<p>professionals<br> in the creative industries</p>	
-					<div class="header-button"><a href="" class="header-button__link">get in touch</a></div>
-				</div>
-			</div>
-			<div class="carousel__slider">
-				<div class="slider__content">
-					<h2>we are clemo.</h2>
-					<p>professionals<br> in the creative industries</p>
-					<div class="header-button"><a href="" class="header-button__link">get in touch</a></div>
-				</div>
-			</div>
+	<div class="trekking-wrapper">
+		<div class="trekking" id="arrow">
+		<form action="">
+		<div class="checkbox">
+			<input type="checkbox" name="box" value="men" id="check" checked><label for="check">men</label>
+			<input type="checkbox" name="box" value="women" id="checktwo" checked><label for="checktwo">women</label>
+			<input type="checkbox" name="box" value="children" id="checkthree" checked><label for="checkthree">children</label>
 		</div>
-		<div class="carousel-controls"></div>
-	</div>
-	<div class="what">
-		<p>what we do?</p>
-	</div>
-	<div class="content"> 
-		<div class="content__first content__all">
-			<div class="first__image">
-				<img src="images/content1.jpg" alt="">
-			</div>
-			<div class="first__text text__right">
-				<h4 class="title">creative</h4>
-				<h3 class="title2">kitchen</h3>
-				<p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-				</p>
-				<p class="paragraph paragraph2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-				</p>
-				<div class="content__button"><a href=""  class="content__button--link">learn more</a></div>
-			</div>
-		</div>
-		<div class="content__second content__all">
-			<div class="second__text text__left">
-				<h4 class="title">art</h4>
-				<h3 class="title2">installation</h3>
-				<p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-				<p class="paragraph paragraph2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-				<div class="content__button"><a href=""  class="content__button--link">learn more</a></div>
-			</div>
-			<div class="second__image">
-				<img src="images/content2.jpg" alt="">
-			</div>
-		</div>
-		<div class="content__third content__all">
-			<div class="third__image">
-				<img src="images/content3.jpg" alt="">
-			</div>
-			<div class="third__text text__right">
-				<h4 class="title">print</h4>
-				<h3 class="title2">design</h3>
-				<p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-				<p class="paragraph paragraph2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-				<div class="content__button"><a href=""  class="content__button--link">learn more</a></div>
-			</div>
-		</div>
-		<div class="content__works">
-			<div class="best">
-				<span>our best work</span>
-			</div>
-			<div class="grid">
-				<div class="grid-item "><img src="images/works1.jpg" alt=""></div>
-				<div class="grid-item grid-item--height2"><img src="images/works2.jpg" alt=""></div>
-				<div class="grid-item "><img src="images/works3.jpg" alt=""></div>
-				<div class="grid-item grid-item--height2"><img src="images/works4.jpg" alt=""></div>
-				<div class="grid-item grid-item--height2"><img src="images/works5.jpg" alt=""></div>
-				<div class="grid-item "><img src="images/works6.jpg" alt=""></div>
-			</div>
-			<div class="works__button"><a href="" class="button__link">learn more</a></div>
+			<input type="submit" value="See all products" class="submit">
+		</form>
 		</div>
 	</div>
-	<div class="team">
-			<h2>best team</h2>
-			<div class="left"></div>
-			<div class="right"></div>
-		<div class="team__carousel">
-			<div class="team__carousel__all carousel1">	
-				<div class="all__img"><img src="images/face1.jpg" alt=""></div>
-				<h3 class="all__name">paul hall</h3>
-				<p class="all__proffesions">art director</p>		
+	<div class="products" >
+		<div class="products-men" id="men">
+			<h2>Men</h2>
+		<div class="products-men-box">
+			<div class="men-pages">
+			<span>1/5</span>
+			<div class="men-pages-arrow">
+			<a href=""><div class="sprite"></div></a>
+			<a href=""><div class="sprite right"></div></a>
 			</div>
-			<div class="team__carousel__all carousel2">	
-				<div class="all__img"><img src="images/face2.jpg" alt=""></div>
-				<h3 class="all__name">joshua spencer</h3>
-				<p class="all__proffesions">founder</p>				
 			</div>
-			<div class="team__carousel__all carousel3">	
-				<div class="all__img"><img src="images/face3.jpg" alt=""></div>
-				<h3 class="all__name">diane lewis</h3>
-				<p class="all__proffesions">artist designer</p>				
+			<div class="carousel">
+				<div class="products-men-box-first box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">S</a></li>
+						<li><a href="">M</a></li>
+						<li><a href="">L</a></li>
+						<li><a href="">XL</a></li>
+						<li><a href="">XXL</a></li>
+					</ul>
+					<ul>
+						<li><a href=""><div class="circle blue"></div></a></li>
+						<li><a href=""><div class="circle yellow"></div></a></li>
+						<li><a href=""><div class="circle black"></div></a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/men1.png" alt="men1">
+				</div>
+				<div class="products-price">
+					<span>T-shirt</span>
+					<span>5,00€</span>
+				</div>
+				</div>
+				<div class="products-men-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">30</a></li>
+						<li><a href="">31</a></li>
+						<li><a href="">32</a></li>
+						<li><a href="">33</a></li>
+						<li><a href="">34</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/men2.png" alt="men2">
+				</div>
+				<div class="products-price">
+					<span>Pants FORCLAZ</span>
+					<span>30,00€</span>
+				</div>
+				</div>
+				<div class="products-men-box-third box-all">
+				<div class="products-size">
+					<span class="backpack">10 litri</span>
+				</div>
+				<div class="products-img">
+					<img src="images/men3.png" alt="men3">
+				</div>
+				<div class="products-price">
+					<span>Backpack</span>
+					<span>60,00€</span>
+				</div>
+				</div>
+				<div class="products-men-box-first box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">S</a></li>
+						<li><a href="">M</a></li>
+						<li><a href="">L</a></li>
+						<li><a href="">XL</a></li>
+						<li><a href="">XXL</a></li>
+					</ul>
+					<ul>
+						<li><a href=""><div class="circle blue"></div></a></li>
+						<li><a href=""><div class="circle yellow"></div></a></li>
+						<li><a href=""><div class="circle black"></div></a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/men1.png" alt="men1">
+				</div>
+				<div class="products-price">
+					<span>T-shirt</span>
+					<span>5,00€</span>
+				</div>
+				</div>
+				<div class="products-men-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">30</a></li>
+						<li><a href="">31</a></li>
+						<li><a href="">32</a></li>
+						<li><a href="">33</a></li>
+						<li><a href="">34</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/men2.png" alt="men2">
+				</div>
+				<div class="products-price">
+					<span>Pants FORCLAZ</span>
+					<span>30,00€</span>
+				</div>
+				</div>
+				<div class="products-men-box-third box-all">
+				<div class="products-size">
+					<span class="backpack">10 litri</span>
+				</div>
+				<div class="products-img">
+					<img src="images/men3.png" alt="men3">
+				</div>
+				<div class="products-price">
+					<span>Backpack</span>
+					<span>60,00€</span>
+				</div>
+				</div>
 			</div>
-			<div class="team__carousel__all carousel4">
-				<div class="all__img"><img src="images/face1.jpg" alt=""></div>
-				<h3 class="all__name">paul hall</h3>
-				<p class="all__proffesions">art director</p>					
+		</div>
+		</div>
+		<div class="products-women" id="women">
+			<h2>Women</h2>	
+		<div class="products-women-box">
+			<div class="women-pages">
+			<span>1/5</span>
+			<div class="women-pages-arrow">
+			<a href=""><div class="sprite"></div></a>
+			<a href=""><div class="sprite right"></div></a>
 			</div>
-			<div class="team__carousel__all carousel5">	
-				<div class="all__img"><img src="images/face2.jpg" alt=""></div>
-				<h3 class="all__name">joshua spencer</h3>
-				<p class="all__proffesions">founder</p>				
 			</div>
-			<div class="team__carousel__all carousel6">	
-				<div class="all__img"><img src="images/face3.jpg" alt=""></div>
-				<h3 class="all__name">diane lewis</h3>
-				<p class="all__proffesions">artist designer</p>				
+			<div class="carousel-women">
+				<div class="products-women-box-first box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">4</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">10</a></li>
+						<li><a href="">12</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women1.png" alt="women1">
+				</div>
+				<div class="products-price">
+					<span>Giacket</span>
+					<span>60,00€</span>
+				</div>
+				</div>
+				<div class="products-women-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">34</a></li>
+						<li><a href="">36</a></li>
+						<li><a href="">38</a></li>
+						<li><a href="">40</a></li>
+						<li><a href="">41</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women2.png" alt="women2">
+				</div>
+				<div class="products-price">
+					<span>Trekking shoes</span>
+					<span>80,00€</span>
+				</div>
+				</div>
+				<div class="products-women-box-third box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">4</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">10</a></li>
+						<li><a href="">12</a></li>
+					</ul>
+					<ul>
+						<li><a href=""><div class="circle pink"></div></a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women3.png" alt="women3">
+				</div>
+				<div class="products-price">
+					<span>t-shirt</span>
+					<span>20,00€</span>
+				</div>
+				</div>
+				<div class="products-women-box-first box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">4</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">10</a></li>
+						<li><a href="">12</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women1.png" alt="women1">
+				</div>
+				<div class="products-price">
+					<span>Giacket</span>
+					<span>60,00€</span>
+				</div>
+				</div>
+				<div class="products-women-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">34</a></li>
+						<li><a href="">36</a></li>
+						<li><a href="">38</a></li>
+						<li><a href="">40</a></li>
+						<li><a href="">41</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women2.png" alt="women2">
+				</div>
+				<div class="products-price">
+					<span>Trekking shoes</span>
+					<span>80,00€</span>
+				</div>
+				</div>
+				<div class="products-women-box-third box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">4</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">10</a></li>
+						<li><a href="">12</a></li>
+					</ul>
+					<ul>
+						<li><a href=""><div class="circle pink"></a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/women3.png" alt="women3">
+				</div>
+				<div class="products-price">
+					<span>t-shirt</span>
+					<span>20,00€</span>
+				</div>
+				</div>
 			</div>
-			<div class="team__carousel__all carousel7">	
-				<div class="all__img"><img src="images/face1.jpg" alt=""></div>
-				<h3 class="all__name">paul hall</h3>
-				<p class="all__proffesions">art director</p>		
+		</div>
+		</div>
+		<div class="products-child" id="child">
+			<h2>Children</h2>
+		<div class="products-child-box">
+			<div class="child-pages">
+			<span>1/5</span>
+			<div class="child-pages-arrow">
+			<a href=""><div class="sprite"></div></a>
+			<a href=""><div class="sprite right"></div></a>
 			</div>
-			<div class="team__carousel__all carousel8">	
-				<div class="all__img"><img src="images/face2.jpg" alt=""></div>
-				<h3 class="all__name">joshua spencer</h3>
-				<p class="all__proffesions">founder</p>				
+		</div>
+		<div class="carousel-child">
+			<div class="products-child-box-first box-all">
+				<div class="products-size">	
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>				
+				</div>
+				<div class="products-img">
+					<img src="images/children1.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Sweater</span>
+					<span>30,00€</span>
+				</div>
 			</div>
-			<div class="team__carousel__all carousel9">	
-				<div class="all__img"><img src="images/face3.jpg" alt=""></div>
-				<h3 class="all__name">diane lewis</h3>
-				<p class="all__proffesions">artist designer</p>				
+			<div class="products-child-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+				</div>
+				<div class="products-img">
+					<img src="images/children2.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Hat</span>
+					<span>10,00€</span>
+				</div>
 			</div>
+			<div class="products-child-box-third box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">L</a></li>
+						<li><a href="">XL</a></li>
+				</div>
+				<div class="products-img">
+					<img src="images/children3.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Sweater zip</span>
+					<span>60,00€</span>
+				</div>
+			</div>
+			<div class="products-child-box-first box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>					
+				</div>
+				<div class="products-img">
+					<img src="images/children1.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Sweater</span>
+					<span>30,00€</span>
+				</div>
+			</div>
+			<div class="products-child-box-second box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">L</a></li>
+						<li><a href="">XL</a></li>
+					</ul>	
+				</div>
+				<div class="products-img">
+					<img src="images/children2.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Hat</span>
+					<span>10,00€</span>
+				</div>
+			</div>
+			<div class="products-child-box-third box-all">
+				<div class="products-size">
+					<span class="size">size</span>
+					<ul id="ul">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>	
+				</div>
+				<div class="products-img">
+					<img src="images/children1.png" alt="">
+				</div>
+				<div class="products-price">
+					<span>Sweater zip</span>
+					<span>60,00€</span>
+				</div>
+			</div>
+			</div>
+
+		</div>	
 		</div>
 	</div>
-	<div class="comments">
-		<h2>clients say’s</h2>
-	<div class="comments__carousel--box">
-		<div class="comments__carousel">
-				<div class="comments__text">
-					<div class="who">
-						<h3 class="all__name who__name">frank sims</h3>
-						<h4 class="all__proffesions who__proffesions">photographer</h4>
-					</div>
-					<div class="review">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit<br> voluptatem accusantium doloremque laudantium,<br> totam rem aperiam, eaque ipsa quae ab illo inventore<br> veritatis et quasi architecto beatae vitae dicta sunt<br> explicabo. </p>
-					</div>
-				</div>	
-				<div class="comments__img">
-					<img src="images/says1.jpg" alt="">
-					<img src="images/says2.jpg" alt="">
-					<img src="images/says3.jpg" alt="">
-					<img src="images/says4.jpg" alt="">
-				</div>
-		</div>
-		<div class="comments__carousel">
-				<div class="comments__text">
-					<div class="who">
-						<h3 class="all__name who__name">frank sims</h3>
-						<h4 class="all__proffesions who__proffesions">photographer</h4>
-					</div>
-					<div class="review">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit<br> voluptatem accusantium doloremque laudantium,<br> totam rem aperiam, eaque ipsa quae ab illo inventore<br> veritatis et quasi architecto beatae vitae dicta sunt<br> explicabo. </p>
-					</div>
-				</div>	
-				<div class="comments__img">
-					<img src="images/says1.jpg" alt="">
-					<img src="images/says2.jpg" alt="">
-					<img src="images/says3.jpg" alt="">
-					<img src="images/says4.jpg" alt="">
-				</div>
-		</div>
-		<div class="comments__carousel">
-				<div class="comments__text">
-					<div class="who">
-						<h3 class="all__name who__name">frank sims</h3>
-						<h4 class="all__proffesions who__proffesions">photographer</h4>
-					</div>
-					<div class="review">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit<br> voluptatem accusantium doloremque laudantium,<br> totam rem aperiam, eaque ipsa quae ab illo inventore<br> veritatis et quasi architecto beatae vitae dicta sunt<br> explicabo. </p>
-					</div>
-				</div>	
-				<div class="comments__img">
-					<img src="images/says1.jpg" alt="">
-					<img src="images/says2.jpg" alt="">
-					<img src="images/says3.jpg" alt="">
-					<img src="images/says4.jpg" alt="">
-				</div>
-		</div>
-	</div>
+	<div class="about-us">
+		<div class="about-us-content">	
+		<h2>About us</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br> do eiusmod tempor incididunt ut labore et dolore magna<br>aliqua. Ut enim ad minim veniam, quis nostrud<br>exercitation</p>
+ 		</div>
 	</div>
 	<footer>
-		<div class="footer">
-			<h2>get in touch</h2>	
-			<div class=" footer__content footer__content--left">
-				<div class="contacts adress">
-				<div class="contacts__sprite sprite1">					
-				</div>
-				<span>23 Mulholland Drive, Suite 721. Los Angeles 10010100<br> S. Main Street. Los Angeles 90012</span>
-				</div>
-				<div class="contacts phone">
-				<div class="contacts__sprite sprite2">				
-				</div>
-				<span>+1-670-567-5590</span>
-				</div>
-				<div class="contacts mail">
-				<div class="contacts__sprite sprite3">					
-				</div>
-				<span>hello@clemocreative.com</span>
-				</div>
-				<div class="contacts ">
-					<a href="#"><div class="social-link fb"></div></a>
-					<a href="#"><div class="social-link tw"></div></a>
-					<a href="#"><div class="social-link goog"></div></a>
-					<a href="#"><div class="social-link pint"></div></a>
-					<a href="#"><div class="social-link inst"></div></a>
-				</div>
+		<div class="footer-top">
+			<div class="footer-top-content">
+				<img src="images/twitter.png" alt="">
+				<span>“ E-commerce psd theme available ”</span>
 			</div>
-			<div class="footer__content footer__content--right">
-				<input type="text" placeholder="name">
-				<input type="email" placeholder="e-mail">
-				<label for="area">your message</label>
-				<textarea name="text" id="area" cols="65" rows="5"></textarea>
-				<button class="submit footer__submit">submit</button>
-			</div>		
 		</div>
-		<div class="reserved">
-			<h2>&#169;2016 clemo</h2>
-			<p>all rights reserved</p>
-		</div>
+		<div class="footer-bottom">
+			<div class="footer-text">
+				<h2>Trekking</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit, sed do eiusmod tempor incididunt ut labore et<br> 	dolore magna aliqua. Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat.</p>
+			</div>
+			<div class="footer-menu">
+				<ul>
+					<li><a href="#">Credits</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<p>Design by gianluca cosetta</p>
+			</div>
+	</div>
 	</footer>
 	<script src="js/jq.js"></script>
-	<script src="masonry/masonry.pkgd.min.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script>
+		$('.carousel-women').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  prevArrow: ".women-pages-arrow a:first-child",
+  nextArrow: ".women-pages-arrow a:last-child",
+  responsive: [
+                            {
+                              breakpoint: 950,
+                              settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                              }
+                            },
+                            {
+                              breakpoint: 820,
+                              settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                              }
+                            },
+                          ]
+});
 		$('.carousel').slick({
-		  dots: true,
-		  infinite: true,
-		  speed: 500,
-		  fade: true,
-		  cssEase: 'linear',
-		  adaptiveHeight: true,
-		  arrows: false,
-		  appendDots: $('.carousel-controls'),
-
-		});
-		$('.team__carousel').slick({
-		  slidesToShow: 3,
-		  slidesToScroll: 3,
-		  infinite: true,
-		  dots: true,
-		  prevArrow: ".left",
-  		  nextArrow: ".right",
-  		  responsive: [{
-		  		  	breakpoint: 1024,
-		  		  	settings: {
-		  		  		slidesToShow: 2,
-		  		  		slidesToScroll: 2,
-		  		  	}
-		  		  },
-		  		  {
-		  		  	breakpoint: 900,
-		  		  	settings: {
-		  		  		slidesToShow: 1,
-		  		  		slidesToScroll: 1,	
-		  		    }
-		  			}
-		  		   ]
-		});
-		$('.comments__carousel--box').slick({
-		  slidesToShow: 1,
-		  slidesToScroll: 1,
-		  dots: true,
-		  arrows: false,
-		});
-		$('.grid').masonry({
-  		// options
-  		itemSelector: '.grid-item',
-  		//columnWidth: 10
-		});
-		$(".burger").on('click', function() { 
-			$(".burger").toggleClass('open');
-	  		$(".nav").toggleClass('open');
-		});  
-		$(window).on('resize', function() {      
-	  		if ($(window).width()>700) {
-	  			$(".nav").removeClass('open');
-	  			$(".burger").removeClass('open');
-	  			$(".nav1,.nav2,.nav3").removeClass('transform');
-	  		}
-		});
-		$(".burger").on('click', function() { 
-			$(".burger").toggleClass('transform');
-	  		$(".nav").toggleClass('transform');
-	  		$(".nav1,.nav2,.nav3").toggleClass('transform');
-
-	  	});
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  prevArrow: ".men-pages-arrow a:first-child",
+  nextArrow: ".men-pages-arrow a:last-child",
+  responsive: [
+                            {
+                              breakpoint: 950,
+                              settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                              }
+                            },
+                            {
+                              breakpoint: 820,
+                              settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                              }
+                            },
+                          ]
+});
+		$('.carousel-child').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  prevArrow: ".child-pages-arrow a:first-child",
+  nextArrow: ".child-pages-arrow a:last-child",
+  responsive: [
+                            {
+                              breakpoint: 950,
+                              settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                              }
+                            },
+                            {
+                              breakpoint: 820,
+                              settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                              }
+                            },
+                          ]
+});
+	</script>
+	<script>
+	$(function() {
+$( "#check" ).on( "change", function() {
+   	$("#men").fadeToggle();
+})
+});
+	</script>
+	<script>
+	$(function() {
+$( "#checktwo" ).on( "change", function() {
+   	$("#women").fadeToggle();
+})
+});
+	</script>
+	<script>
+	$(function() {
+$( "#checkthree" ).on( "change", function() {
+   	$("#child").fadeToggle();
+})
+});
+	</script>
+	<script>
+	$( ".size" ).on( "click", function() {
+  $(this).next().fadeToggle();
+});
 	</script>
 </body>
 </html>
