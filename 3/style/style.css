@@ -154,7 +154,7 @@ body {
 /*-------------carousel--------------*/
 .carousel__item{
 	width: 100%;
-	height: calc(100vh - 100px);
+	height: 100px;
 	outline: none;
 	position: relative;
 	overflow: hidden
