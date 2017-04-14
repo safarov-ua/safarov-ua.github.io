@@ -27,8 +27,9 @@ a{
 /*---------------header----------------*/
 .header{
 	height: 100px;
-	position: relative;
 	z-index:19;
+	width: 100%;
+	position: relative;
 }
 /*------------------menu--------------*/
 .menu{
@@ -51,6 +52,8 @@ a{
 	cursor: pointer;
 	transition: .5s;
 	padding-top: 10px;
+	color: #606060;
+	padding-left: 10px;
 }
 .menu-exit:hover{
 	color: #bb8e62;
@@ -165,6 +168,7 @@ a{
 .search-visible{
 	bottom:-30px;
 	opacity: 1;
+	z-index: 5;
 }
 /*-------------carousel--------------*/
 .carousel__item{
@@ -233,6 +237,27 @@ a{
 	border:none;
 	cursor: pointer;
 }
+/*-----------products----------*/
+.item-name{
+	position: absolute;
+	left: 30px;
+	font-size: 20px;
+	bottom: 10px;
+}
+.item-price{
+	position: absolute;
+	right:30px;	
+	font-size: 20px;
+	bottom: 10px;	
+}
+.product_description{
+	height: 30%;
+	border: 2px solid #dadada;
+	position: absolute;
+	width: 100%;
+	bottom: -50px;
+	padding-top: 170px;
+}
 /*--------production---------*/
 .production{
 	position: relative;
@@ -283,14 +308,6 @@ a{
 	width: 95%;
 	height: auto;
 }
-.production__product1-description{
-	height: 200px;
-	border: 2px solid #dadada;
-	position: absolute;
-	width: 100%;
-	bottom: -40px;
-	padding-top: 170px;
-}
 /*product1 end*/
 /*product2 begin*/
 .production__product2{
@@ -303,17 +320,11 @@ a{
 	position: relative;
 	z-index: 2;
 	overflow: hidden;
+	max-height: 400px;
 }
 .production__product2-img img{
 	width: 95%;
 	height: auto;
-}
-.production__product2-description{
-	border: 2px solid #dadada;
-	position: absolute;
-	width: 100%;
-	bottom: -40px;
-	padding-top: 170px;
 }
 /*product2 end*/
 /*product3 begin*/
@@ -327,18 +338,11 @@ a{
 	position: relative;
 	z-index: 2;
 	overflow: hidden;
+	max-height: 400px;
 }
 .production__product3-img img{
 	width: 95%;
 	height: auto;
-}
-.production__product3-description{
-	height: 200px;
-	border: 2px solid #dadada;
-	position: absolute;
-	width: 100%;
-	bottom:-40px;
-	padding-top: 170px;
 }
 /*--------production-end-------*/
 /*---------popular-begin---------*/
@@ -347,26 +351,21 @@ a{
 	margin:0 auto;
 }
 .popular__item{
-	margin: 30px 33px;
+	margin: 150px 33px;
 	outline: none;
 	position: relative;	
 }
 .popular__item-img{
 	position: relative;
 	z-index: 2;
+	text-align: center;
+	height: 240px;
+	overflow: hidden;
 }
 .popular__item-img img{
 	width: 95%;
 	height: auto;
 	margin: 0 auto;
-}
-.popular__item-description{
-	height: 200px;
-	border: 2px solid #dadada;
-	position: absolute;
-	width: 100%;
-	bottom: -30px;
-	padding-top: 170px;
 }
 .slick-dots li{
 	margin: 0 35px;
@@ -398,10 +397,25 @@ a{
 #slick-slide12 button::before{
 	content:"03";
 }
-
-
-
-
+.slick-prev{
+	font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: -30px;
+    left: -25px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+.slick-prev::before{
+	content: "←";
+	font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+}
 
 
 
@@ -566,15 +580,14 @@ a{
 }
 .footer__inner-social span{
 	font-size: 16px;
+	padding-bottom: 15px;
 }
 .footer-sprite{
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	margin: 0;
+	margin: 10px 15px;
 	background-image: url(../images/footer-sprite.png);
-	margin-left: 15px;
-	margin-right: 15px;
 	padding-top: 20px;
 }
 .footer-sprite2{
@@ -603,35 +616,48 @@ a{
 .carousel__item-number{
 	font-size: 120px;
 	left:125px;
-	top: 40px;
+	top: 20px;
 }
 .carousel__item-name{
 	font-size: 70px;
 	left:125px;
-	top: 160px;
+	top: 140px;
 }
 .carousel__item-button{
 	padding: 12px 30px;
 	font-size: 24px;	
 	left:120px;
-	top: 250px;
+	top: 230px;
 }
 .carousel__item::before{
 	left: 75px;
 }
 }
 @media screen and (max-width: 768px){
-.carousel{
-	display: none;
+.production__product2{
+	display: block;
+	position: relative;
+	width: 100%;
+	margin-bottom: 150px;
+}
+.production__product3{
+	display: block;
+	position: relative;
+	width: 100%;
+	float: none;
 }
 }
 @media screen and (max-width: 600px){
+.carousel{
+	display: none;
+}
 .header__left-menu{
 	display: none;
 }
 .title{
 	font-size: 50px;
 }
+
 }
 @media screen and (max-width: 480px){
 

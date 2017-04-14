@@ -75,27 +75,27 @@
 				<div class="production__product1-img">
 					<img src="images/product1.jpg" alt="product1">
 				</div>
-				<div class="production__product1-description">
-					<span>Подарочный набор</span>
-					<span>399грн</span>
+				<div class="product_description">
+					<span class="item-name">Подарочный набор</span>
+					<span class="item-price">399грн</span>
 				</div>
 			</div>
 			<div class="production__product2">
 				<div class="production__product2-img">
 					<img src="images/product2.jpg" alt="product1">
 				</div>
-				<div class="production__product2-description">
-					<span>Подарочный набор</span>
-					<span>399грн</span>
+				<div class="product_description">
+					<span class="item-name">Подарочный набор</span>
+					<span class="item-price">399 грн</span>
 				</div>
 			</div>
 			<div class="production__product3">
 				<div class="production__product3-img">
 					<img src="images/product3.jpg" alt="product1">
 				</div>
-				<div class="production__product3-description">
-					<span>Подарочный набор</span>
-					<span>399грн</span>
+				<div class="product_description">
+					<span class="item-name">Подарочный набор</span>
+					<span class="item-price">399грн</span>
 				</div>
 			</div>
 		</div>
@@ -104,83 +104,83 @@
 			<div class="popular__carousel">
 				<div class="popular__item">
 					<div class="popular__item-img">
-						<img src="images/popular1.jpg" alt="item"></img>
+						<img src="images/popular2.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Стетчбук</span>
-						<span>70 грн</span>
+					<div class="product_description">
+						<span class="item-name">Стетчбук</span>
+						<span class="item-price">70 грн</span>
+					</div>
+				</div>
+				<div class="popular__item">
+					<div class="popular__item-img">
+						<img src="images/popular3.jpg" alt="item"></img>
+					</div>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 				</div>
 				<div class="popular__item">
 					<div class="popular__item-img">
 						<img src="images/popular1.jpg" alt="item"></img>
 					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
-					</div>
-				</div>
-				<div class="popular__item">
-					<div class="popular__item-img">
-						<img src="images/popular1.jpg" alt="item"></img>
-					</div>
-					<div class="popular__item-description">
-						<span>Скетчбук</span>
-						<span>100грн</span>
+					<div class="product_description">
+						<span class="item-name">Скетчбук</span>
+						<span class="item-price">100грн</span>
 					</div>
 					</div>
 				</div>
@@ -316,17 +316,56 @@
   		  infinite: true,
   		  slidesToShow: 3,
   		  slidesToScroll: 3,
-  		  arrow:false,
-  		  dots:true
+  		  arrows:false,
+  		  dots:true,
+  		   responsive: [{
+		  		  	breakpoint: 768,
+		  		  	settings: {
+		  		  		slidesToShow: 2,
+		  		  		slidesToScroll: 2,
+		  		  		dots: false,
+		  		  		arrows: true,
+		  		  	}
+		  		  },
+		  		  {
+		  		  	breakpoint: 600,
+		  		  	settings: {
+		  		  		slidesToShow: 1,
+		  		  		slidesToScroll: 1,	
+		  		  		dots: false,
+		  		  		arrows: true,
+		  		    }
+		  			}
+		  		   ]
 		});
+
 	</script>
 	<script>
 		$('.comments__carousel').slick({
 	  		  infinite: true,
 	  		  slidesToShow: 3,
 	  		  slidesToScroll: 3,
-	  		  arrow:false,
-	  		  dots:false
+	  		  arrows:false,
+	  		  dots:false,
+			  responsive: [{
+		  		  	breakpoint: 768,
+		  		  	settings: {
+		  		  		slidesToShow: 2,
+		  		  		slidesToScroll: 2,
+		  		  		dots: false,
+		  		  		arrows: true,
+		  		  	}
+		  		  },
+		  		  {
+		  		  	breakpoint: 600,
+		  		  	settings: {
+		  		  		slidesToShow: 1,
+		  		  		slidesToScroll: 1,	
+		  		  		dots: false,
+		  		  		arrows: true,
+		  		    }
+		  			}
+		  		   ]
 		});
 	</script>
 	<script>
@@ -347,6 +386,5 @@ $(".menu-exit").click(function() {
   .toggleClass('menu-visible');
   });
 	</script>
-
 </body>
 </html>
