@@ -292,7 +292,6 @@ a{
 	bottom: -120px;
 	position: absolute;
 	left:50%;
-	transform:translateX(-50%);
 }
 /*product1 begin*/
 .production__product1{
@@ -456,39 +455,48 @@ a{
 	outline: none;
 	margin:0 30px;
 	text-align: center;
+	overflow: hidden;
+	border: 1px solid #dadada; 
 }
 .comments__carousel-item::after{
 	content: '';
 	display: block;
 	position: absolute;
 	background-color: #fff;
-	width: 900px;
+	width: 200%;
 	height: 100%;
-	transform: rotate(10deg);
-	left:-180px;
-	bottom:-50%;
+	transform: rotate(10deg) translateX(-50%);
+	left: 0%;
+	bottom:-250px;
+	z-index: 2;  
 } 
 .comments-img{
 	width: auto;
 	height: 250px;
+	z-index: 2;
+	margin: 0 auto;
 }
 .comments-photo{
-	border: 4px solid #fff;
+	border: 2px solid #fff;
 	border-radius: 50%;
 	position: absolute;
-	z-index:4;
-	right:115px;
-	bottom: 170px;
+	z-index:5;
+	right:10%;
+	top: 170px;
 	width: 120px;
 	height: 120px;
+	overflow: hidden;
 }
 .comments-name{
-	font-size: 30px;
-	left:15px;	
-	z-index: 3;
+	font-size: 20px;
+	left:10px;	
+	z-index: 5;
 	font-weight: normal;
-	position: relative;
+	position: absolute;
 	text-align: left;
+	top: 210px;
+	width: 150px;
+	overflow: hidden;
 }
 .comments-name::before{
 	content:'';
@@ -501,17 +509,37 @@ a{
 }
 .comments-comment{
 	margin-top: 20px;
-	padding-left: 15px;
+	padding: 15px;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
 	/* width: 100%; */
 	overflow-y: auto;
 	height: 150px;
 	text-align: left;
+	z-index: 5;
+	position: relative;
 }
 
-
-
+/* ----------------about-us-------------- */
+.about-us{
+	text-align: center;
+	overflow: hidden;
+}
+.about-us__img{
+	display: inline-block;
+	width: 40%;
+	margin-right: 10px;
+	height: auto;
+}
+.about-us__text{
+	display: inline-block;
+	width: 40%;
+	text-align: left;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 20px;
+	margin-left: 10px;
+	vertical-align: top;
+}
 
 
 
@@ -538,7 +566,7 @@ a{
 
 /*--------about--------*/
 .about{
-	width: 80%;
+	width: 100%;
 	margin:0 auto;
 }
 .about-img{
@@ -653,6 +681,21 @@ a{
 }
 }
 @media screen and (max-width: 768px){
+/* .menu{
+	width: calc(-100% + 20px);
+	left: 0;
+} */
+.title{
+	font-size: 50px;
+}
+.title::before{
+	width: 130px;
+	top: -20px;
+}
+.title::after{
+	height: 50px;
+	bottom: -80px;
+}
 .search{
 	width: 100%;
 }
@@ -679,9 +722,7 @@ a{
 .header__left-menu{
 	display: none;
 }
-.title{
-	font-size: 50px;
-}
+
 
 }
 @media screen and (max-width: 480px){
