@@ -34,7 +34,7 @@ a{
 /*------------------menu--------------*/
 .menu{
 	position: absolute;
-	border-right: 1px solid black;
+	border/* -right */: 1px solid black;
 	text-align: center;
 	height: 100vh;
 	width: 250px;
@@ -44,7 +44,7 @@ a{
 	transition: .5s;
 }
 .menu-visible{
-	left:0;
+	left:-20px;
 }
 .menu-exit{
 	float: left;
@@ -143,6 +143,8 @@ a{
 	font-size: 16px;
 	color: #606060;
 	padding: 5px;
+	display: block;
+	margin:0 auto;
 }
 .login-forgot{
 	margin: 10px;
@@ -806,10 +808,22 @@ a{
 }
 }
 @media screen and (max-width: 768px){
-/* .menu{
-	width: calc(-100% + 20px);
-	left: 0;
-} */
+ .menu{
+	width: 100%;
+	left: -100%;
+	border: none;
+} 
+.menu-visible{
+	left: 0px;
+}
+.cart, .login{
+	width: 100%;
+	right: -100%;
+	border: none;
+}
+.cart-visible, .login-visible{
+	right: 0;
+}
 .title{
 	font-size: 50px;
 }
