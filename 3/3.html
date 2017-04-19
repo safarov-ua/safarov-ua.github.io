@@ -23,6 +23,21 @@
 				<li class="menu__item"><a href="#" class="menu__link">Оплата</a></li>
 			</ul>
 		</div>
+		<div class="cart">
+			<span class="cart-exit">&#10060;</span>
+		</div>
+		<div class="login">
+			<span class="login-exit">&#10060;</span>
+			<span class="login-text">Войти в личный кабинет</span>
+			<input type="text" placeholder="emai" class="login-mail">
+			<input type="password" placeholder="password" class="login-password">
+			<div class="login-forgot">
+				<a href="#" >Забыли пароль?</a>
+			</div>
+			<button class="login-enter login-buttons">Войти</button>
+			<button class="login-register login-buttons">Регистрация</button>
+			<button></button>
+		</div>
 			<a href="" class="header__logo"><img src="images/logo.jpg" alt="logo"></a>
 			<div class="header__left">
 				<a href="#" class="header__left-link">
@@ -189,12 +204,14 @@
 			<h2 class="title">Отзывы</h2>
 			<div class="comments__carousel">
 				<div class="comments__carousel-item">
-					<img src="images/comment-img1.jpg" alt="" class="comments-img">
-					<h3 class="comments-name">Елена</h3>
+					<img src="images/product1.jpg" alt="" class="comments-img">
+					<h3 class="comments-name">Tkbpjdtnf sdassada</h3>
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat maxime unde totam 	placeat atque minus fuga animi obcaecati. Magni sint, quibusdam expedita! Culpa, facilis, minus cupiditate iusto omnis suscipit.
 					</p>
-					<img src="images/comment-img1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/comments-face1.jpg" alt="">
+					</div>
 				</div>
 				<div class="comments__carousel-item">
 					<img src="images/comment-img1.jpg" alt="" class="comments-img">
@@ -202,7 +219,9 @@
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas repellat sed sapiente quae est illo praesentium, laboriosam error magnam pariatur!
 					</p>
-					<img src="images/comments-face1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/comments-face1.jpg" alt="">
+					</div>
 				</div>
 				<div class="comments__carousel-item">
 					<img src="images/comment-img1.jpg" alt="" class="comments-img">
@@ -210,7 +229,9 @@
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nemo molestiae, sit. Praesentium animi, sit itaque distinctio doloremque soluta, odio fugiat quas obcaecati assumenda deleniti at explicabo eos, ullam voluptas.
 					</p>
-					<img src="images/comments-face1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/logo.jpg" alt="">
+					</div>
 				</div>
 				<div class="comments__carousel-item">
 					<img src="images/comment-img2.jpg" alt="" class="comments-img">
@@ -218,7 +239,9 @@
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam reprehenderit illum quidem autem esse fuga hic similique, nihil molestiae sit, fugit deserunt magni iste accusantium tempora explicabo error aut expedita quod. Doloremque repellendus unde asperiores porro, assumenda quo nisi, minus facilis minima provident nobis dolores!
 					</p>
-					<img src="images/comments-face1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/popular3.jpg" alt="">
+					</div>
 				</div>
 				<div class="comments__carousel-item">
 					<img src="images/comment-img1.jpg" alt="" class="comments-img">
@@ -226,7 +249,9 @@
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ex nobis hic aliquid. Sit, quam est atque amet delectus ad laborum dolorem ullam neque adipisci quas fugiat officiis accusantium minus pariatur suscipit itaque voluptas corrupti libero illum assumenda commodi. Similique incidunt tempore error illo. Laboriosam eos nam rem quibusdam illum!
 					</p>
-					<img src="images/comments-face1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/popular2.jpg" alt="">
+					</div>
 				</div>
 				<div class="comments__carousel-item">
 					<img src="images/comment-img1.jpg" alt="" class="comments-img">
@@ -234,7 +259,9 @@
 					<p class="comments-comment">
 						Lorem ipsum dolor sit amet, consectetur adipisicing e
 					</p>
-					<img src="images/comments-face1.jpg" alt="" class="comments-photo">
+					<div class="comments-photo">	
+						<img src="images/product1.jpg" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -375,20 +402,28 @@
 	</script>
 	<script>
 $(".sprite2").click(function() {
-  $('.search')
-  .toggleClass('search-visible');
+  $('.search').toggleClass('search-visible');
   });
-	</script>
-	<script>
+
 $(".header__left").click(function() {
-  $('.menu')
-  .toggleClass('menu-visible');
+  $('.menu').toggleClass('menu-visible');
   });
-	</script>
-	<script>
+
 $(".menu-exit").click(function() {
-  $('.menu')
-  .toggleClass('menu-visible');
+  $('.menu').toggleClass('menu-visible');
+  });
+
+$(".sprite3").click(function(){
+	$(".cart").toggleClass('cart-visible');
+});
+$(".cart-exit").click(function() {
+  $('.cart').toggleClass('cart-visible');
+  });
+$(".sprite1").click(function(){
+	$(".login").toggleClass('login-visible');
+});
+$(".login-exit").click(function() {
+  $('.login').toggleClass('login-visible');
   });
 	</script>
 </body>

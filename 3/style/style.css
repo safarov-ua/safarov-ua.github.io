@@ -74,6 +74,105 @@ a{
 .menu__link:hover{
 	color: #bb8e62;
 }
+/*--------------cart---------------*/
+
+.cart{
+	position: absolute;
+	border-left: 1px solid black;
+	text-align: center;
+	height: 100vh;
+	width: 250px;
+	z-index: 9;
+	background-color: #fff;
+	right: -270px;
+	transition: .5s;
+}
+.cart-visible{
+	right:0;
+}
+.cart-exit{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .5s;
+	padding-top: 10px;
+	color: #606060;
+	padding-right: 10px;
+}
+.cart-exit:hover{
+	color: #bb8e62;
+}
+/* ---------login------------- */
+.login{
+	position: absolute;
+	border-left: 1px solid black;
+	text-align: center;
+	height: 100vh;
+	width: 250px;
+	z-index: 9;
+	background-color: #fff;
+	right: -270px;
+	transition: .5s;
+}
+.login-visible{
+	right:0;
+}
+.login-exit{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .5s;
+	padding-top: 10px;
+	color: #606060;
+	padding-right: 10px;
+}
+.login-exit:hover{
+	color: #bb8e62;
+}
+.login-text{
+	text-transform: uppercase;
+	margin-top: 80px;
+	display: block;
+	text-align: center;
+}
+.login-mail, .login-password {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-top: 20px;
+	outline: none;
+	font-size: 16px;
+	color: #606060;
+	padding: 5px;
+}
+.login-forgot{
+	margin: 10px;
+	text-align: right;
+	right:10px;
+}
+.login-forgot a{
+	font-size: 16px;
+	color: #606060;
+	text-decoration: none;
+	font-family: 'Cormorant Garamond', serif;	
+}
+.login-buttons{
+	display: block;
+	margin:10px auto;
+	padding: 5px;
+	border:1px solid #dadada;
+	font-size: 16px;
+	font-family: 'Cormorant Garamond', serif;	
+	z-index:6;
+	background-color:transparent;
+	transition: all .6s ease;
+	width: 180px;
+}
+.login-buttons:hover{
+	background-color: #bb8e62;
+	color:white;
+	border:none;
+	cursor: pointer;
+}
 /*header__logo*/
 .header__logo{
 	position: absolute;
@@ -229,11 +328,11 @@ a{
 	top:400px;
 	z-index:6;
 	background-color:transparent;
+	transition: all .6s ease;
 }
 .carousel__item-button:hover{
 	background-color: #bb8e62;
 	color:white;
-	transition: all .6s ease;
 	border:none;
 	cursor: pointer;
 }
@@ -257,6 +356,12 @@ a{
 	width: 100%;
 	bottom: -50px;
 	padding-top: 170px;
+	transition:border-left .2s,border-top .2s .2s,border-right .2s .4s,border-bottom .2s .6s;
+
+}
+.product_description:hover{
+	border: 2px solid red;
+
 }
 /*--------production---------*/
 .production{
@@ -401,19 +506,31 @@ a{
     line-height: 0;
     position: absolute;
     top: 50%;
-    left: -10px;
+    left: -15px;
     display: block;
     width: 40px;
     height: 40px;
+
 }
 .slick-prev::before{
-	content: "<";
-	font-family: '';
+	content: "";
     font-size: 40px;
-    line-height: 1;
+    opacity: .75;
+    background-color: gray;
+    font-weight: bold;
+    width: 30px;
+    height: 4px;
+    display: block;
+}
+.slick-prev::after{
+	content: "<";
+    font-size: 40px;
     opacity: .75;
     color: gray;
-    font-weight: bold;
+    display: block;
+    position: absolute;
+    left:-5px;
+	top:20px;
 }
 .slick-next{
 	font-size: 0;
@@ -453,7 +570,7 @@ a{
 .comments__carousel-item{
 	position: relative;
 	outline: none;
-	margin:0 30px;
+	margin:0 15px;
 	text-align: center;
 	overflow: hidden;
 	border: 1px solid #dadada; 
@@ -463,21 +580,21 @@ a{
 	display: block;
 	position: absolute;
 	background-color: #fff;
-	width: 200%;
-	height: 100%;
-	transform: rotate(10deg) translateX(-50%);
+	width: 110%;
+	height: 90px;
+	transform: rotate(10deg) translateX(-5%);
 	left: 0%;
-	bottom:-250px;
+	top:225px;
 	z-index: 2;  
 } 
 .comments-img{
 	width: auto;
-	height: 250px;
+	height: 270px;
 	z-index: 2;
 	margin: 0 auto;
 }
 .comments-photo{
-	border: 2px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 50%;
 	position: absolute;
 	z-index:5;
@@ -486,17 +603,21 @@ a{
 	width: 120px;
 	height: 120px;
 	overflow: hidden;
+	background-color: transparent;
+}
+.comments-photo img{
+	height: 100%;
+	width: auto;
 }
 .comments-name{
 	font-size: 20px;
-	left:10px;	
+	left:15px;	
+	width: 140px;
 	z-index: 5;
 	font-weight: normal;
 	position: absolute;
 	text-align: left;
-	top: 210px;
-	width: 150px;
-	overflow: hidden;
+	top: 220px;
 }
 .comments-name::before{
 	content:'';
@@ -504,8 +625,9 @@ a{
 	display: block;
 	background-color: #bb8e62;
 	width: 140px;
-	height: 2px;
-	top:50px;
+	height: 1px;
+	top:70px;
+	z-index: 5;
 }
 .comments-comment{
 	margin-top: 20px;
@@ -514,7 +636,7 @@ a{
 	font-size: 22px;
 	/* width: 100%; */
 	overflow-y: auto;
-	height: 150px;
+	height: 123px;
 	text-align: left;
 	z-index: 5;
 	position: relative;
@@ -716,6 +838,9 @@ a{
 	position: relative;
 	width: 100%;
 	float: none;
+}
+.comments-photo{
+	right: 10px;
 }
 .about-us__img{
 	display: block;
