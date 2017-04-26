@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fortuna</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<input type="checkbox" id="mute">
+	<label for="mute" id="label-mute"></label>
+	<audio src="music/spin.mp3" id="spin"></audio>
+	<audio src="music/win.mp3" id="win"></audio>
+	<!-- <video src="video/jackpot.mp4" id="jackpot"></video> -->
+	<div class="main">
+		<table class="table">
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb1.png" alt="" class="wincomb-img"> </td>
+				<td>X5</td>
+			</tr>
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb2.png" alt="" class="wincomb-img"> </td>
+				<td>X8</td>
+			</tr>
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb3.png" alt="" class="wincomb-img"> </td>
+				<td>X15</td>
+			</tr>
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb4.png" alt="" class="wincomb-img"> </td>
+				<td>X30</td>
+			</tr>
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb5.png" alt="" class="wincomb-img"> </td>
+				<td>X50</td>
+			</tr>
+			<tr class="winComb">
+				<td><img src="images/slotStyle1/comb6.png" alt="" class="wincomb-img"> </td>
+				<td>X200</td>
+			</tr>
+		</table>
+		<div class="windows" id="window1"></div>
+		<div class="windows" id="window2"></div>
+		<div class="windows" id="window3"></div>
+	</div>
+	<div class="controls">
+		<button id="button">START</button>
+		<input type="checkbox" id="autoplay">
+		<label for="autoplay" id="buttonautoplay">autoplay</label>
+		<input type="radio" class="radio" id="x1" name="gender" value="male" checked>
+		<label for="x1" class="label-value">$1</label>
+  		<input type="radio" class="radio" id="x2" name="gender" value="female">
+  		<label for="x2" class="label-value">$2</label>
+  		<input type="radio" class="radio" id="x3" name="gender" value="other">
+  		<label for="x3" class="label-value">$5</label>
+  		<select id="select">
+  			<option>Fruit machine</option>
+  			<option>Cards machine</option>
+		</select>
+		<input type="number" id="value" value="1000" disabled>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -12,6 +12,5 @@ img{
 	transition: .4s; 
 }
 img:hover{
-	opacity: 1;
 	filter: grayscale(0%); 
 }
