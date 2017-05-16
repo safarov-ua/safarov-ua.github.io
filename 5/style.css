@@ -1,0 +1,116 @@
+*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			text-align: center;
+		}
+		#canvas{
+			margin: 40px 0;
+			border:2px dashed blue;
+			cursor: pointer;
+			transition: .5s;
+		}
+		#check{
+			display: none;
+		}
+		#checkbox{
+			display: inline-block;
+			position: relative;
+			height: 22px;
+			width: 50px;
+			background-color: gray;
+			border-radius: 20px;
+
+		}
+		#checkbox::after{
+			content:" ";
+			display: block;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #ed3131;
+			transition: .5s;
+			border:1px solid gray;
+			top:0;
+			left:0;
+		}
+		#checkbox::before{
+			content:'';
+			display: block;
+			position: absolute;
+			width: 50px;
+			height: 1px;
+			top: 50%;
+			background-color: darkgray;
+		}
+		#check:checked ~ #checkbox::after{
+			transform: translateX(30px);
+			background-color: #38ed3b;
+		}
+		.buttons{
+			border-radius: 30px;
+			width: 100px;
+			height: 54px;
+			text-transform: uppercase;
+			outline: none;
+			font-family: sans-serif;
+			font-weight: bold;
+			margin-bottom: 15px;
+			margin: 10px 0;
+		}
+		#backward, #increase, #save{
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		#forward, #decrease, #load{
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+		.resize{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			outline: none;
+			font-size: 20px;
+		}
+		#size{
+			width: 50px;
+			height: 30px;
+			outline: none;
+		}
+		input[type="color"]{
+			width: 60px;
+			height: 60px;
+			border: none;
+			outline: none;
+			position: relative;
+			overflow: hidden;
+		}
+		input[type="color"]::after{
+			content:"";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #fff;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border:2px solid darkgray;
+		}
+		input[type="color"]::before{
+			content:"";
+			display: block;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border:2px solid darkgray;
+			z-index: 5;
+			box-shadow: 0 0 0 20px white;
+		}

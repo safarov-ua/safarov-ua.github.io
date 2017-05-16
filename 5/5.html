@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas width="500" height="500" id="canvas"></canvas>
+	<br>
+	<input type="color" id="color">
+	<input type="color" id="background" value="#ffffff">
+	<button id="clear">Clear</button>
+	<input type="number" id="size" value="5">
+	<input type="checkbox" id="check">
+	<label for="check" id="checkbox"></label>
+	<button class="buttons" id="increase">+</button>
+	<button class="buttons" id="decrease">-</button>
+	<button id="backward" class="buttons">Backward</button>
+	<button id="forward" class="buttons">Forward</button>
+	<br>
+	<button id="save" class="buttons">Save</button>
+	<button id="load" class="buttons">Load</button>
+	<script>
+		var canvas= document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var color = document.getElementById("color");
+		var size = document.getElementById("size");
+		var clear  =document.getElementById("clear");
+		var arrCircles = [];
+		var circlesDeleted = [];
+		var backgroundColor = document.getElementById("background");
+		var mirrorEffect = document.getElementById("check");
+		var increase = document.getElementById("increase");
+		var decrease = document.getElementById("decrease");
+		var backward = document.getElementById("backward");
+		var forward = document.getElementById("forward");
+		var save = document.getElementById("save");
+		var load = document.getElementById("load");	
+		ctx.strokeStyle = color.value;
+		function Circle(x,y,color,size,scale, mirror) {
+			this.x = x;
+			this.y = y;
+			this.color = color;
+			this.size = size;
+			this.scale = 1;
+			this.mirror = mirror;
+   			
+   		this.draw  = function(){
+       		ctx.beginPath();
+        	ctx.arc(this.x,this.y,this.size*this.scale,0,2*Math.PI);
+        	ctx.fillStyle=this.color;
+        	ctx.fill();
+        	if(this.mirror == true){
+        		ctx.beginPath();
+        		ctx.arc(canvas.width - this.x,this.y,this.size*this.scale,0,2*Math.PI);
+        		ctx.fillStyle=this.color;
+        		ctx.fill();
+        		ctx.beginPath();
+        		ctx.arc(this.x,canvas.height - this.y,this.size*this.scale,0,2*Math.PI);
+        		ctx.fillStyle=this.color;
+        		ctx.fill();
+        		ctx.beginPath();
+        		ctx.arc(canvas.width - this.x,canvas.height -this.y,this.size*this.scale,0,2*Math.PI);
+        		ctx.fillStyle=this.color;
+        		ctx.fill();
+        }
+    }
+    		arrCircles.push(this);
+   	}
+   	canvas.onmousemove = function(evt){
+   		/*mouse position*/
+   		var rect = canvas.getBoundingClientRect();
+		var x = event.clientX - rect.left;
+		var y = event.clientY - rect.top;
+
+    	if (evt.buttons) {
+    		circlesDeleted = [];
+    		var circle = new Circle(x, y,color.value, size.value,1,mirrorEffect.checked);
+        	circle.draw();  	 
+    }
+}
+	backgroundColor.onchange = function(){
+		canvas.style.backgroundColor = backgroundColor.value;
+					}
+
+	clear.onclick = function(){
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		arrCircles = [];
+		circlesDeleted = [];
+	}
+
+	backward.onclick = function(){
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+
+		var a = arrCircles.length;
+
+		circlesDeleted.push(arrCircles[a-1]);
+		arrCircles.pop();
+
+		for(var i = 0;i < arrCircles.length; i++){
+			arrCircles[i].draw();
+		}
+	}
+	forward.onclick = function(){
+		if(circlesDeleted.length > 0){
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+
+			var a = circlesDeleted.length;
+
+			arrCircles.push(circlesDeleted[a-1]);
+			circlesDeleted.pop();
+
+			for(var i = 0;i < arrCircles.length; i++){
+				arrCircles[i].draw();
+			}
+		}
+	}
+	increase.onclick = function(){			
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+
+		for(var i = 0;i < arrCircles.length; i++){
+			arrCircles[i].scale += 0.5;
+			arrCircles[i].draw();
+		}		
+	}
+	decrease.onclick = function(){			
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		for(var i = 0;i < arrCircles.length; i++){
+			if(arrCircles[i].scale >= 1.5){
+				arrCircles[i].scale -= 0.5;
+				arrCircles[i].draw();
+			}
+			else{
+				arrCircles[i].draw();
+			}	
+		}
+	}
+	save.onclick = function(){
+		if(arrCircles.length > 0){
+			var b = localStorage.setItem("Circle",JSON.stringify(arrCircles));
+		}
+	}
+	load.onclick = function(){
+		var a = (JSON.parse(localStorage.getItem("Circle")));
+		if(localStorage.length > 0){
+			for(var i = 0;i < a.length; i++){
+				a[i].draw = draw;
+				arrCircles.push(a[i]);
+			}
+			for(var b = 0;b < arrCircles.length;b++){
+				arrCircles[b].draw();
+			}
+		}
+		else{
+			console.log(5)
+		}
+		localStorage.clear();
+	}
+	</script>
+</body>
+</html>
