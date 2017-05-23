@@ -2,13 +2,30 @@
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
+			vertical-align: middle;
 			text-align: center;
+			font-family: sans-serif;
 		}
 		#canvas{
-			margin: 40px 0;
-			border:2px dashed blue;
+			margin: 10px 0;
+			border:2px solid black;
 			cursor: pointer;
 			transition: .5s;
+			display: inline-block;
+			border-radius: 10px;
+		}
+		.settings-element{
+			display: inline-block;
+			margin: 5px 15px;
+		}
+		.settings-element label{
+			font-size: 20px;
+		}
+		#clear{
+			border-radius: 50%;
+			outline: none;
+			padding: 15px;
+			font-weight: bold;
 		}
 		#check{
 			display: none;
@@ -51,13 +68,13 @@
 		.buttons{
 			border-radius: 30px;
 			width: 100px;
-			height: 54px;
+			height: 45px;
 			text-transform: uppercase;
 			outline: none;
-			font-family: sans-serif;
+			
 			font-weight: bold;
 			margin-bottom: 15px;
-			margin: 10px 0;
+			margin: 10px 0 0;
 		}
 		#backward, #increase, #save{
 			border-top-right-radius: 0px;
@@ -91,14 +108,14 @@
 			content:"";
 			display: block;
 			position: absolute;
-			width: 30px;
-			height: 30px;
+			width: 25px;
+			height: 25px;
 			border-radius: 50%;
 			background-color: #fff;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
-			border:2px solid darkgray;
+			border:1px solid black;
 		}
 		input[type="color"]::before{
 			content:"";
@@ -110,7 +127,23 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
-			border:2px solid darkgray;
+			border:1px solid black;
 			z-index: 5;
 			box-shadow: 0 0 0 20px white;
+		}
+		.storage-text{
+			display: inline-block;
+			position: absolute;
+			top:120px;
+			left:50%;
+			transform: translateX(-50%);
+			font-size: 0px;
+			transition: 1.5s;
+			opacity: 0;
+			text-shadow: 0 0 5px white;
+			font-weight: bold;
+		}
+		.storage-text-visible{
+			opacity: 1;
+			font-size: 40px;
 		}

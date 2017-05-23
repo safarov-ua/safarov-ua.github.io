@@ -6,21 +6,40 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<canvas width="500" height="500" id="canvas"></canvas>
-	<br>
-	<input type="color" id="color">
-	<input type="color" id="background" value="#ffffff">
-	<button id="clear">Clear</button>
-	<input type="number" id="size" value="5">
-	<input type="checkbox" id="check">
-	<label for="check" id="checkbox"></label>
-	<button class="buttons" id="increase">+</button>
-	<button class="buttons" id="decrease">-</button>
-	<button id="backward" class="buttons">Backward</button>
-	<button id="forward" class="buttons">Forward</button>
-	<br>
-	<button id="save" class="buttons">Save</button>
-	<button id="load" class="buttons">Load</button>
+	
+
+	<div class="settings">
+		<div class="settings-element">
+			<label for="color">Line color</label>
+			<input type="color" id="color">	
+		</div>
+		<div class="settings-element">
+			<label for="background">Background color</label>
+			<input type="color" id="background" value="#ffffff">
+		</div>	
+		<div class="settings-element">		
+			<label for="size">Size</label>
+			<input type="number" id="size" value="5" min="1" max="99">	
+		</div>
+		<div class="settings-element">	
+		<label for="check">Mirror effect</label>
+		<input type="checkbox" id="check">
+		<label for="check" id="checkbox"></label>	
+		</div>
+		<div class="settings-element">
+			<button id="clear">Clear</button>
+		</div>	
+	</div>
+	<canvas width="900" height="450" id="canvas"></canvas>
+	<div class="buttons-container">
+		<button class="buttons" id="increase">+</button>
+		<button class="buttons" id="decrease">-</button>
+		<button id="backward" class="buttons">Backward</button>
+		<button id="forward" class="buttons">Forward</button>
+		<button id="save" class="buttons">Save</button>
+		<button id="load" class="buttons">Load</button>
+		<span class="storage-text" id="saved"></span>
+	</div>
 	<script>
 		var canvas= document.getElementById("canvas");
 		var ctx = canvas.getContext("2d");
@@ -37,13 +56,23 @@
 		var forward = document.getElementById("forward");
 		var save = document.getElementById("save");
 		var load = document.getElementById("load");	
+		var localStorageText = document.getElementById("saved");
 		ctx.strokeStyle = color.value;
+		function toggle(elem, text){
+			elem.innerHTML = text;
+			elem.classList.add("storage-text-visible");
+			setTimeout(function(){
+                	elem.classList.remove("storage-text-visible");
+                	elem.innerHTML = "";
+                }, 2000);
+		}	
+
 		function Circle(x,y,color,size,scale, mirror) {
 			this.x = x;
 			this.y = y;
 			this.color = color;
 			this.size = size;
-			this.scale = 1;
+			this.scale = scale;
 			this.mirror = mirror;
    			
    		this.draw  = function(){
@@ -64,22 +93,22 @@
         		ctx.arc(canvas.width - this.x,canvas.height -this.y,this.size*this.scale,0,2*Math.PI);
         		ctx.fillStyle=this.color;
         		ctx.fill();
-        }
-    }
+        	}
+    	}
     		arrCircles.push(this);
-   	}
-   	canvas.onmousemove = function(evt){
+   		 }
+   		canvas.onmousemove = function(evt){
    		/*mouse position*/
-   		var rect = canvas.getBoundingClientRect();
-		var x = event.clientX - rect.left;
-		var y = event.clientY - rect.top;
+   			var rect = canvas.getBoundingClientRect();
+			var x = event.clientX - rect.left;
+			var y = event.clientY - rect.top;
 
-    	if (evt.buttons) {
-    		circlesDeleted = [];
-    		var circle = new Circle(x, y,color.value, size.value,1,mirrorEffect.checked);
-        	circle.draw();  	 
-    }
-}
+    		if (evt.buttons) {
+    			circlesDeleted = [];
+    			var circle = new Circle(x, y,color.value, size.value,1,mirrorEffect.checked);
+        		circle.draw();  	 
+    		}
+		}
 	backgroundColor.onchange = function(){
 		canvas.style.backgroundColor = backgroundColor.value;
 					}
@@ -138,24 +167,31 @@
 	}
 	save.onclick = function(){
 		if(arrCircles.length > 0){
+			toggle(localStorageText, "Saved!");
+
 			var b = localStorage.setItem("Circle",JSON.stringify(arrCircles));
+		}
+		else{
+			toggle(localStorageText, "Nothing to save");
 		}
 	}
 	load.onclick = function(){
 		var a = (JSON.parse(localStorage.getItem("Circle")));
 		if(localStorage.length > 0){
 			for(var i = 0;i < a.length; i++){
-				a[i].draw = draw;
-				arrCircles.push(a[i]);
+				var circle = new Circle(a[i].x, a[i].y, a[i].color, a[i].size , a[i].scale, a[i].mirror);
+				arrCircles.push(circle);
 			}
-			for(var b = 0;b < arrCircles.length;b++){
+			for(var b = 0; b < arrCircles.length; b++){
 				arrCircles[b].draw();
-			}
+				toggle(localStorageText, "Loaded!");	
+			}	
 		}
 		else{
-			console.log(5)
+			toggle(localStorageText, "Nothing to load");
 		}
 		localStorage.clear();
+			
 	}
 	</script>
 </body>
