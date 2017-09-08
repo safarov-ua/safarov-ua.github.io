@@ -7,13 +7,43 @@
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-	
 	<header class="header">
-		<div class="mobile__menu"></div>
-		<div class="header__inner">
-			<div class="burger"></div>
-			<h2 class="header__title">SiteName</h2>
-			<button class="header__button">Log in or Sign up</button>
+		<div class="video__container">
+			<video autoplay loop muted>
+				<source src="videos/sunset.webm">
+				<source src="videos/sunset.mp4">
+			</video>
+		</div>	
+		<div class="video__line"></div>
+		<div class="mobile-nav">
+			<img src="images/cancel.svg" alt="cancel" class="cancel">
+			<ul class="mobile-nav__list">
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">How it works</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">About</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Blog</a></li>
+			</ul>
+			<ul class="mobile-nav__list">
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Log in or Sign up</a></li>
+			</ul>
+			<ul class="mobile-nav__list">
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Support Center</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact Us</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Reviews</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Privacy</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Terms of Service</a></li>
+			</ul>
+			<ul class="mobile-nav__list">
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Facebook</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Twitter</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">YouTube</a></li>
+				<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Blogs</a></li>
+			</ul>
+		</div>
+		<div class="header-top">
+			<img src="images/menu.svg" alt="burger-menu" class="burger-menu">
+
+			<a class="header__logo">SiteName</a>
+			<button class="header-top__button">Log in or Sign up</button>
 			<nav>
 				<ul class="nav__list">
 					<li class="nav__item"><a href="#" class="nav__link">For Businesses</a></li>
@@ -23,20 +53,34 @@
 				</ul>
 			</nav>			
 		</div>
+		<div class="header-bottom">
+		<h1 class="header-bottom__title">Plan the perfect funeral<br>in less than five minutes</h1>
+		<p class="header-bottom__text">Let us do work for you - then share your wishes<br>with family and friends</p>
+		<input type="text" placeholder="Enter city or zip code" class="header-bottom__input">
+		<button class="header-bottom__button header-bottom__button-lg">Get Quote</button>
+		<button class="header-bottom__button header-bottom__button-sm">></button>
 	</header>
-	<div class="video__container">
-		<video autoplay loop muted>
-			<source src="videos/sunset.webm">
-			<source src="videos/sunset.mp4">
-		</video>
-		<div class="video__line"></div>
-	</div>
 	
-	<div class="main">
-		<h1 class="title">Plan the perfect funeral<br>in less than five minutes</h1>
-		<p class="main__text">Let us do work for you - then share your wishes<br>with family and friends</p>
-		<input type="text" placeholder="Enter city or zip code" class="main__input">
-		<button class="main__button">Get Quote</button>
+	
+	
+	</div>
+	<div class="advantages">
+		<h2 class="block-title">We will Find<br> the Right Professional for You</h2>
+		<div class="advantages__block">
+			<img src="images/clock.svg" alt="clock">
+			<h3>Save Time</h3>
+			<p>Tell us your funeral requirments are and we'll find you best quotes</p>
+		</div>
+		<div class="advantages__block">
+			<img src="images/piggybank.svg" alt="money box">
+			<h3>Save Money</h3>
+			<p>We make sure you find the best quotes</p>
+		</div>
+		<div class="advantages__block">
+			<img src="images/card.svg" alt="card">
+			<h3>Personalized Service</h3>
+			<p>We tailor quotes to your needs - just tell us what you want</p>
+		</div>
 	</div>
 	<script src="js/script.js"></script>
 </body>
