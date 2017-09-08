@@ -149,7 +149,7 @@ video{
 
 
 
- @media screen and (max-width: 870px){
+ @media screen and (max-width: 770px){
 	.header__inner{
 		display: none;
 	}
