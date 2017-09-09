@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Site name</title>
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -42,7 +44,7 @@
 		<div class="header-top">
 			<img src="images/menu.svg" alt="burger-menu" class="burger-menu">
 
-			<a class="header__logo">SiteName</a>
+			<a class="header__logo" href="#">SiteName</a>
 			<button class="header-top__button">Log in or Sign up</button>
 			<nav>
 				<ul class="nav__list">
@@ -58,30 +60,171 @@
 		<p class="header-bottom__text">Let us do work for you - then share your wishes<br>with family and friends</p>
 		<input type="text" placeholder="Enter city or zip code" class="header-bottom__input">
 		<button class="header-bottom__button header-bottom__button-lg">Get Quote</button>
-		<button class="header-bottom__button header-bottom__button-sm">></button>
+		<button class="header-bottom__button header-bottom__button-sm"></button>
 	</header>
-	
-	
-	
-	</div>
 	<div class="advantages">
 		<h2 class="block-title">We will Find<br> the Right Professional for You</h2>
 		<div class="advantages__block">
 			<img src="images/clock.svg" alt="clock">
-			<h3>Save Time</h3>
-			<p>Tell us your funeral requirments are and we'll find you best quotes</p>
+			<div class="advantages__text">
+				<h3>Save Time</h3>
+				<p>Tell us your funeral requirments are and we'll find you best quotes</p>
+			</div>
 		</div>
 		<div class="advantages__block">
 			<img src="images/piggybank.svg" alt="money box">
-			<h3>Save Money</h3>
-			<p>We make sure you find the best quotes</p>
+			<div class="advantages__text">
+				<h3>Save Money</h3>
+				<p>We make sure you find the best quotes</p>
+			</div>
 		</div>
 		<div class="advantages__block">
 			<img src="images/card.svg" alt="card">
-			<h3>Personalized Service</h3>
-			<p>We tailor quotes to your needs - just tell us what you want</p>
+			<div class="advantages__text">
+				<h3>Personalized Service</h3>
+				<p>We tailor quotes to your needs - just tell us what you want</p>
+			</div>
+	</div>
+	</div>
+	<div class="plan">
+		<div class="plan__inner">
+			<h2 class="block-title">Create a personalized Plan<br> to Share Ensure Your Plan is Perfect</h2>
+			<div class="plan__block">
+				<img src="images/blank.svg" alt="">
+				<div class="plan__text">
+					<h3>Answer the questions</h3>
+					<p>Use our template to make sure all your wishes are captured in one place</p>
+				</div>
+			</div>
+			<div class="plan__block">
+				<img src="images/mail.svg" alt="">
+				<div class="plan__text">
+					<h3>Enter your email address</h3>
+					<p>Receive the best quotes, and know your wishes will be followed</p>
+				</div>
+			</div>
+			<div class="plan__block">
+				<img src="images/open-mail.svg" alt="">
+				<div class="plan__text">
+					<h3>Receive the email with funeral plan and quotes</h3>
+					<p>Receive the best quotes, and know your wishes will be followed</p>
+				</div>
+			</div>
+			<div class="plan__button">Create your Free Plan</div>
 		</div>
 	</div>
+	<div class="comments">
+		<h2 class="block-title">What People are Saying</h2>
+		<div class="comments-carousel">
+			<div class="comments-carousel__box">
+				<h3 class="comments-carousel__name">Jude says</h3>
+				<ul class="rating">
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+				</ul>
+				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deserunt esse sunt, temporibus corporis beatae quos magni, odio quae. Cum ratione, suscipit, placeat numquam delectus doloribus nam voluptates ab sapiente pariatur nesciunt ullam laudantium doloremque, dolor facilis, nihil adipisci. Accusamus beatae omnis quasi temporibus dolores.</p>
+			</div>
+			<div class="comments-carousel__box">
+				<h3 class="comments-carousel__name">Barbara says</h3>
+				<ul class="rating">
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+				</ul>
+				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate!</p>
+			</div>
+			<div class="comments-carousel__box">
+				<h3 class="comments-carousel__name">Barbara says</h3>
+				<ul class="rating">
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+				</ul>
+				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo debitis, laborum, tempore quia blanditiis libero.</p>
+			</div>
+			<div class="comments-carousel__box">
+				<h3 class="comments-carousel__name">Ivan says</h3>
+				<ul class="rating">
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+					<li class="rating__item"></li>
+				</ul>
+				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate!</p>
+			</div>
+		</div>
+	</div>
+	<div class="future">
+		<div class="future__inner">
+			<h2 class="block-title">Future Planning Guidance</h2>
+			<div class="future-carousel">
+				<div class="future-carousel__item">
+					<div class="future-carousel__img">
+						<img src="images/pen.jpg" alt="pen">
+					</div>
+					<h3 class="future-carousel__title">Hom Much Does the Average Funeral Cost?</h3>
+					<p class="future-carousel__text">For many people, it's hard to consider a funeral as anything resembling a "celebration", but this is something that humanist funerals perhaps archive the most.</p>
+					<span class="future-carousel__date">February 23, 2017</span>
+				</div>
+				<div class="future-carousel__item">
+					<div class="future-carousel__img">
+						<img src="images/grow.jpg" alt="grow">
+					</div>
+					<h3 class="future-carousel__title">Humanist Funeral: A Unique Farewell and Celebration Of Life</h3>
+					<p class="future-carousel__text">For many people, it's hard to consider a funeral as anything resembling a "celebration", but this is something that humanist funerals perhaps archive the most.</p>
+					<span class="future-carousel__date">February 23, 2017</span>
+				</div>
+				<div class="future-carousel__item">
+					<div class="future-carousel__img">
+						<img src="images/reading.jpg" alt="reading">
+					</div>
+					<h3 class="future-carousel__title">Humanist Funeral: A Unique Farewell and Celebration Of Life</h3>
+					<p class="future-carousel__text">For many people, it's hard to consider a funeral as anything resembling a "celebration", but this is something that humanist funerals perhaps archive the most.</p>
+					<span class="future-carousel__date">February 23, 2017</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer__inner">
+			<div class="footer__logo">
+				<a href="#">SiteName</a>
+				<span>SiteName 2010-2017</span>
+			</div>
+			<ul class="footer__list">
+				<li class="footer__item">Help &#38; Support</li>
+				<li class="footer__item"><a href="" class="footer__link">How it Works</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Support Center</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Contact Us</a></li>
+			</ul>
+			<ul class="footer__list">
+				<li class="footer__item">Company</li>
+				<li class="footer__item"><a href="" class="footer__link">About Us</a></li>
+				<li class="footer__item"><a href="" class="footer__link">News Blog</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Reviews</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Privacy</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Terms of Service</a></li>
+			</ul>
+			<ul class="footer__list">
+				<li class="footer__item">Social</li>
+				<li class="footer__item"><a href="" class="footer__link">Facebook</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Twitter</a></li>
+				<li class="footer__item"><a href="" class="footer__link">YouTube</a></li>
+				<li class="footer__item"><a href="" class="footer__link">Blogs</a></li>
+
+			</ul>
+		</div>
+	</footer>
+	<script src="js/jq.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
