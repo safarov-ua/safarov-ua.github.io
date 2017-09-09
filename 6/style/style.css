@@ -1,11 +1,22 @@
+@keyframes down {
+from {bottom: 40px;}
+30% {bottom: 18px;}
+80% {bottom: 50px;}
+to {bottom: 40px;}
+}
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+
 .block-title{
 	margin-top: 70px;
+}
+.slick-dots{
+	bottom: -100px;
 }
 /* header start */
 .header{
@@ -83,7 +94,6 @@ nav{
 }
 .nav__item{
 	display: inline-block;
-
 }
 .nav__link{
 	text-decoration: none;
@@ -106,14 +116,14 @@ nav{
 	background-color: #7dac3f;
 	cursor: pointer;
 	transition: .3s;
-	margin-top: 30px;
+	margin-top: 35px;
 	margin-left: 40px;
-
+	line-height: normal;
 }
 .header-top__button:hover{
 	background-color: #aa8c67;
 }
-.video__container{
+.header__video{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -122,20 +132,52 @@ nav{
 	overflow: hidden;
 	z-index: -1;
 	text-align: center;
+	background-color: lightgray;
 }
 video{
 	width: 100%;
 	height: auto;
 	z-index: -1;
 }
-.video__line{
-	width: 100%;
+.video__line-left{
+	width: 50%;
 	height: 30px;
 	background-color: white;
 	position: absolute;
 	bottom: 0;
+	left: -30px;
+	border-top-right-radius: 11px;
 }
-
+.video__line-right{
+	width: 50%;
+	height: 30px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	right: -30px;
+	border-top-left-radius: 11px;
+	z-index: -1;
+}
+.video__figure{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -18px;
+	border-radius: 50%;
+	padding: 48px;	
+	border: 30px solid transparent;
+	border-bottom:30px solid white;
+}
+.down-button{
+	position: absolute;
+	left: 50%;
+	color: white;
+	bottom: 40px;
+	font-size: 25px;
+	transform:translateX(-50%);
+	cursor: pointer;
+	animation: down  2s infinite linear;
+}
 /* ---------------header-bottom---------------------- */
 .header-bottom{
 	text-align: center;
@@ -194,27 +236,37 @@ video{
 	overflow: hidden;
 	text-align: center;
 }
-.advantages__block{
+.advantages-block{
 	display: inline-block;
 	margin: 120px 40px 80px;
 	padding: 5px;
 	width: 250px;
 	vertical-align: top;
 }
-.advantages__block img{
+.advantages-block__img{
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	background-image: url(../images/border.svg);
+	line-height: 150px;
+}
+.advantages-block__img img{
 	width: 60px;
 	position: relative;
+	vertical-align: middle;
 }
-.advantages__block h3{
+.advantages-block h3{
 	margin-top: 75px;
 	font-style: 18px;
 }
-.advantages__block p{
+.advantages-block p{
 	margin-top: 20px;
 	color: #6e6e6e;
 	font-size: 14px;
 }
+
 /* ------plan------ */
+
 .plan{
 	background-color: #f5f5f5;
 	width: 100%;
@@ -223,9 +275,10 @@ video{
 	max-width: 1200px;
 	margin:0 auto;
 	text-align: center;
-	padding-top: 1px;	
+	padding-bottom: 1px;	
+	padding-top: 1px;
 }
-.plan__block{
+.plan-block{
 	background-color: #fff;
 	border-radius: 5px;
 	display: inline-block;
@@ -236,42 +289,46 @@ video{
 	vertical-align: top;
 	overflow-y: auto;
 }
-.plan__block img{
+.plan-block img{
 	width: 60px;
 	position: relative;
 }
-.plan__text h3{
+.plan-block__text h3{
 	margin-top: 35px;
 	font-size: 18px;
 }
-.plan__text p{
+.plan-block__text p{
 	margin-top: 20px;
 	font-size: 14px;
 }
 .plan__button{
-	display: inline-block;
+	display: block;
+	margin: 0 auto;
+	width: 280px;
 	outline: none;
 	color: white;
 	border-radius: 5px;
 	background-color: #7dac3f;
 	margin-top: 65px;
 	margin-bottom: 100px;
-	padding: 20px 70px;
+	padding: 20px 0;
 	transition: .3s;
 	cursor: pointer;
 }
 .plan__button:hover{
 	background-color: #aa8c67;
 }
+
 /* --------comments---------*/
 .comments{
 	max-width: 1200px;
 	margin:0 auto;
 	overflow: hidden;
 	text-align: center;
+	padding-bottom: 120px;
 }
 
-.comments-carousel__box{
+.comments-carousel__item{
 	margin-top: 80px;
 	padding: 0 15px;
 	text-align: left;
@@ -286,18 +343,12 @@ video{
 	font-weight: lighter;
 }
 .rating{
-	list-style: none;
 	margin-top: 8px;
-}
-.rating__item{
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	background-image: url(../images/star.png);
-	background-repeat: no-repeat;
+	color: #fac817;
 }
 
 /* -------future-------- */
+
 .future{
 	background-color: #f5f5f5;
 }
@@ -306,10 +357,10 @@ video{
 	margin:0 auto;
 	overflow: hidden;
 	text-align: center;
+	padding-bottom: 100px;
 }
 .future-carousel{
 	margin-top: 50px;
-	margin-bottom: 100px;
 }
 .future-carousel__item{
 	display: inline-block;
@@ -343,7 +394,12 @@ video{
 /* -----footer----- */
 footer{
 	background-color: #323232;
-	min-height: 300px;
+}
+.footer__inner{
+	max-width: 1200px;
+	margin:0 auto;
+	overflow: hidden;
+	padding: 55px 5px 0;
 }
 .footer__logo{
 	display: inline-block;
@@ -356,23 +412,17 @@ footer{
 	color: #424242;
 	font-size: 10px;
 }
-.footer__inner{
-	max-width: 1200px;
-	margin:0 auto;
-	overflow: hidden;
-	padding-top: 55px;
-}
 .footer__list{
 	list-style: none;
 	display: inline-block;
-	margin: 0 50px;
+	margin: 0 90px;
 	vertical-align: top;
 
 }
 .footer__item{
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	color: #aa8c67;
-	font-size: 14px;
+	font-size: 12px;
 }
 .footer__link{
 	color: white;
@@ -424,18 +474,21 @@ footer{
 		width: auto;
 		height: 100%;
 	}
-	.advantages__block{
+	.advantages-block{
 		width: 150px;
-		margin: 80px 10px 80px;
+		margin: 40px 10px;
 	}
-	.plan__block{
+	.plan-block{
 		width: 225px;
 		padding: 25px 20px;
 		margin: 60px 5px 0;
 	}
+	.footer__list{
+		margin: 0 60px;
+	}
 }
 
- @media screen and (max-width: 770px){
+ @media screen and (max-width: 768px){
  	.header-top{
 		padding: 0 30px;
 	}
@@ -454,6 +507,9 @@ footer{
 	.burger-menu{
 		display: inline-block;
 	}
+	.footer__list{
+		margin: 0 20px;
+	}
 } 
  
 @media screen and (max-width: 480px){
@@ -461,10 +517,7 @@ footer{
 		margin-left: 10px;
 	}
 	.header-top__button{
-		margin-top: 40px;
-		margin-left: 0;
-		padding: 12px 5px;
-		margin-top: 30px;
+		display: none;
 	}
 	.header-bottom__title{
 		margin-top: 30px;
@@ -501,13 +554,13 @@ footer{
 	.advantages{
 		padding: 0 10px;
 	}
-	.advantages__block{
+	.advantages-block{
 		display: block;
 		width: 100%;
 		padding: 0 10px;
 		margin: 40px 10px;
 	}
-	.advantages__text{
+	.advantages-block__text{
 		display: inline-block;
 		width: 50%;
 		margin-left: 20px;
@@ -516,29 +569,42 @@ footer{
 	.advantages h3{
 		margin-top: 20px;
 	}
-	.plan__block{
+	.advantages-block__img{
+		background-image: url();
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+	}
+	.plan-block{
 		width: 90%;		
 		height: 150px;
 		padding: 15px 10px;
 	}
-	.plan__text{
+	.plan-block__text{
 		display: inline-block;
 		width: 50%;
 		margin-left: 10px;
 		text-align: left;
 		vertical-align: top;
 	}
-	.plan__text h3{
+	.plan-block__text h3{
 		margin-top: 20px;
 		font-size: 16px;
 	}
-	.plan__text p{
+	.plan-block__text p{
 		margin-top: 10px;
 		font-size: 12px;
 	}
-	.plan__block img{
+	.plan-block img{
 		width: 80px;
 		top:20px;
+	}
+	.footer__inner{
+		text-align: center;
+		padding: 15px;
+	}
+	.footer__list{
+		display: none;
 	}
 	
 }

@@ -10,13 +10,16 @@
 </head>
 <body>
 	<header class="header">
-		<div class="video__container">
+		<div class="header__video">
 			<video autoplay loop muted>
 				<source src="videos/sunset.webm">
 				<source src="videos/sunset.mp4">
 			</video>
 		</div>	
-		<div class="video__line"></div>
+		<div class="video__line-left"></div>
+		<div class="video__line-right"></div>
+		<div class="video__figure">	</div>
+		<span class="down-button">&#8595;</span>
 		<div class="mobile-nav">
 			<img src="images/cancel.svg" alt="cancel" class="cancel">
 			<ul class="mobile-nav__list">
@@ -43,7 +46,6 @@
 		</div>
 		<div class="header-top">
 			<img src="images/menu.svg" alt="burger-menu" class="burger-menu">
-
 			<a class="header__logo" href="#">SiteName</a>
 			<button class="header-top__button">Log in or Sign up</button>
 			<nav>
@@ -56,31 +58,38 @@
 			</nav>			
 		</div>
 		<div class="header-bottom">
-		<h1 class="header-bottom__title">Plan the perfect funeral<br>in less than five minutes</h1>
-		<p class="header-bottom__text">Let us do work for you - then share your wishes<br>with family and friends</p>
-		<input type="text" placeholder="Enter city or zip code" class="header-bottom__input">
-		<button class="header-bottom__button header-bottom__button-lg">Get Quote</button>
-		<button class="header-bottom__button header-bottom__button-sm"></button>
+			<h1 class="header-bottom__title">Plan the perfect funeral<br>in less than five minutes</h1>
+			<p class="header-bottom__text">Let us do work for you - then share your wishes<br>with family and friends</p>
+			<input type="text" placeholder="Enter city or zip code" class="header-bottom__input">
+			<button class="header-bottom__button header-bottom__button-lg">Get Quote</button>
+			<button class="header-bottom__button header-bottom__button-sm"></button>
+		</div>
 	</header>
 	<div class="advantages">
 		<h2 class="block-title">We will Find<br> the Right Professional for You</h2>
-		<div class="advantages__block">
-			<img src="images/clock.svg" alt="clock">
-			<div class="advantages__text">
+		<div class="advantages-block">
+			<div class="advantages-block__img">
+				<img src="images/clock.svg" alt="clock">
+			</div>
+			<div class="advantages-block__text">
 				<h3>Save Time</h3>
 				<p>Tell us your funeral requirments are and we'll find you best quotes</p>
 			</div>
 		</div>
-		<div class="advantages__block">
-			<img src="images/piggybank.svg" alt="money box">
-			<div class="advantages__text">
+		<div class="advantages-block">
+			<div class="advantages-block__img">
+				<img src="images/piggybank.svg" alt="money box">
+			</div>
+			<div class="advantages-block__text">
 				<h3>Save Money</h3>
 				<p>We make sure you find the best quotes</p>
 			</div>
 		</div>
-		<div class="advantages__block">
-			<img src="images/card.svg" alt="card">
-			<div class="advantages__text">
+		<div class="advantages-block">
+			<div class="advantages-block__img">
+				<img src="images/card.svg" alt="card">
+			</div>
+			<div class="advantages-block__text">
 				<h3>Personalized Service</h3>
 				<p>We tailor quotes to your needs - just tell us what you want</p>
 			</div>
@@ -89,23 +98,23 @@
 	<div class="plan">
 		<div class="plan__inner">
 			<h2 class="block-title">Create a personalized Plan<br> to Share Ensure Your Plan is Perfect</h2>
-			<div class="plan__block">
+			<div class="plan-block">
 				<img src="images/blank.svg" alt="">
-				<div class="plan__text">
+				<div class="plan-block__text">
 					<h3>Answer the questions</h3>
 					<p>Use our template to make sure all your wishes are captured in one place</p>
 				</div>
 			</div>
-			<div class="plan__block">
+			<div class="plan-block">
 				<img src="images/mail.svg" alt="">
-				<div class="plan__text">
+				<div class="plan-block__text">
 					<h3>Enter your email address</h3>
 					<p>Receive the best quotes, and know your wishes will be followed</p>
 				</div>
 			</div>
-			<div class="plan__block">
+			<div class="plan-block">
 				<img src="images/open-mail.svg" alt="">
-				<div class="plan__text">
+				<div class="plan-block__text">
 					<h3>Receive the email with funeral plan and quotes</h3>
 					<p>Receive the best quotes, and know your wishes will be followed</p>
 				</div>
@@ -116,48 +125,48 @@
 	<div class="comments">
 		<h2 class="block-title">What People are Saying</h2>
 		<div class="comments-carousel">
-			<div class="comments-carousel__box">
+			<div class="comments-carousel__item">
 				<h3 class="comments-carousel__name">Jude says</h3>
-				<ul class="rating">
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-				</ul>
+					<div class="rating">
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+					</div>
 				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deserunt esse sunt, temporibus corporis beatae quos magni, odio quae. Cum ratione, suscipit, placeat numquam delectus doloribus nam voluptates ab sapiente pariatur nesciunt ullam laudantium doloremque, dolor facilis, nihil adipisci. Accusamus beatae omnis quasi temporibus dolores.</p>
 			</div>
-			<div class="comments-carousel__box">
+			<div class="comments-carousel__item">
 				<h3 class="comments-carousel__name">Barbara says</h3>
-				<ul class="rating">
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-				</ul>
+					<div class="rating">
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+					</div>
 				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate!</p>
 			</div>
-			<div class="comments-carousel__box">
+			<div class="comments-carousel__item">
 				<h3 class="comments-carousel__name">Barbara says</h3>
-				<ul class="rating">
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-				</ul>
+					<div class="rating">
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+					</div>
 				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo debitis, laborum, tempore quia blanditiis libero.</p>
 			</div>
-			<div class="comments-carousel__box">
+			<div class="comments-carousel__item">
 				<h3 class="comments-carousel__name">Ivan says</h3>
-				<ul class="rating">
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-					<li class="rating__item"></li>
-				</ul>
+					<div class="rating">
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+						<span>&#9733;</span>
+					</div>
 				<p class="comments-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate!</p>
 			</div>
 		</div>
@@ -196,7 +205,7 @@
 	<footer>
 		<div class="footer__inner">
 			<div class="footer__logo">
-				<a href="#">SiteName</a>
+				<a href="#">SiteName</a><br>
 				<span>SiteName 2010-2017</span>
 			</div>
 			<ul class="footer__list">
