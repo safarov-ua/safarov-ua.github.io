@@ -54,8 +54,8 @@ window.onload = function(){
    	canvas.onmousemove = function(evt){
    		
    		let rect = canvas.getBoundingClientRect();
-		let x = event.clientX - rect.left;
-		let y = event.clientY - rect.top;
+		let x = evt.clientX - rect.left;
+		let y = evt.clientY - rect.top;
 
     	if (evt.buttons) {
     		circlesDeleted = [];
