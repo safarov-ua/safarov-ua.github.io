@@ -86,19 +86,20 @@ li img{
 	bottom:50px;
 }
 /*trekking*/
-.trekking-wrapper{
+.trekking{
 	background-color: #f5f6f7;
 	min-height: 143px;
+}
+.trekking-wrapper{	
+	max-width: 1184px;
+	margin:0 auto;
 	color:black;
 	text-transform: uppercase;
-}
-.trekking{
-	max-width: 1184px;
 }
 .checkbox{
 	display: inline-block;
 	padding-top: 62px;
-	padding-left: 14.5%;
+	padding-left: 14%;
 }
 label{
 	position: relative;
@@ -141,6 +142,13 @@ label{
 	margin-top: 46px;
 	text-transform: uppercase;
 	margin-right: -34px;
+	transition: .3s;
+	outline: none;
+	cursor: pointer;
+	margin-right: 50px;
+}
+.submit:hover{
+	color: black;
 }
 .trekking::after{
 	content:'';
@@ -445,6 +453,10 @@ footer{
 }
 .footer-bottom{
 	background: #424242;
+}
+.footer-bottom-content{
+	max-width: 1184px;
+	margin:0 auto;
 }
 .footer-text{
 	display: inline-block;

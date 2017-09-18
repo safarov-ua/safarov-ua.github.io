@@ -30,12 +30,9 @@ a{
 	margin: 0 auto;
 	height: 100px;
 	z-index:19;
-	position: fixed;
+	position: relative;
 	background-color: #fff;
-	box-shadow: 5px 0  2px 3px;
 	width: 100%;
-
-
 }
 .header__container{
 	position: relative;
@@ -204,7 +201,7 @@ a{
 .login-buttons:hover{
 	background-color: #bb8e62;
 	color:white;
-	border:none;
+	border-color: transparent;
 	cursor: pointer;
 }
 /*header__logo*/
@@ -413,8 +410,6 @@ a{
 	width: 100%;
 	bottom: -50px;
 	padding-top: 170px;
-	transition:border-top .2s,border-right .2s .4s,border-bottom .2s .6s,border-left .2s .9s;
-
 }
 /*--------production---------*/
 .production{
@@ -512,9 +507,7 @@ a{
 	outline: none;
 	position: relative;	
 }
-.popular__item:hover  .product_description{
-	border: 2px solid #606060;
-}
+
 .popular__item-img{
 	position: relative;
 	z-index: 2;
@@ -822,22 +815,22 @@ a{
 	transition: .3s;
 }
 .footer-sprite1{
-	background-position: 0px 41px;
+	background-position: 0px 45px;
 }
 .footer-sprite2{
-	background-position: 90px 41px;
+	background-position: 90px 45px;
 }
 .footer-sprite3{
-	background-position: 41px 41px;
+	background-position: 41px 45px;
 }
 .footer-sprite1:hover{
-	background-position:  0px 88px;
+	background-position:  0px 92px;
 }
 .footer-sprite2:hover{
-	background-position: 90px 88px;
+	background-position: 90px 92px;
 }
 .footer-sprite3:hover{
-	background-position: 41px 88px;
+	background-position: 41px 92px;
 }
 
 
