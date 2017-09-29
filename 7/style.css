@@ -28,131 +28,130 @@ form {
   form .container {
     margin-bottom: 40px;
     position: relative; }
-  form .input-name {
-    display: inline-block;
-    width: 50%;
-    padding: 12px 0;
-    font-weight: bold; }
-  form #weight, form #sample {
-    float: right;
-    width: 185px;
-    border: none;
-    border-bottom: 1px solid #c5c5c5;
-    padding: 12px 0;
-    background-position: 100% 50%; }
-  form #sample {
-    position: relative; }
-  form #gem {
-    display: none; }
-  form #gem-text {
-    display: inline-block;
-    color: #e60000;
-    font-size: 13px;
-    transition: .3s;
-    vertical-align: middle;
-    width: 50%;
-    margin-left: -5px; }
-  form #gem-switch {
-    position: relative;
-    padding-left: 65px;
-    display: inline-block;
-    width: 50%; }
-    form #gem-switch::before {
-      content: 'нет да';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: -5px;
-      width: 50px;
-      height: 30px;
-      background-color: #7f7f7f;
+    form .container .input-name {
+      display: inline-block;
+      width: 50%;
+      padding: 12px 0;
+      font-weight: bold; }
+    form .container #weight, form .container #sample {
+      float: right;
+      width: 185px;
+      border: none;
+      border-bottom: 1px solid #c5c5c5;
+      padding: 12px 0;
+      background-position: 100% 50%; }
+    form .container #sample {
+      position: relative; }
+    form .container #gem {
+      display: none; }
+    form .container #gem-text {
+      display: inline-block;
+      color: #e60000;
+      font-size: 13px;
+      transition: .3s;
+      vertical-align: middle;
+      width: 50%;
+      margin-left: -5px; }
+    form .container #gem-switch {
+      position: relative;
+      padding-left: 65px;
+      display: inline-block;
+      width: 50%; }
+      form .container #gem-switch::before {
+        content: 'нет да';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 50px;
+        height: 30px;
+        background-color: #7f7f7f;
+        border-radius: 40px;
+        color: white;
+        line-height: 30px;
+        font-size: 11px;
+        word-spacing: 12px;
+        padding-left: 5px; }
+      form .container #gem-switch::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: 2px;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border-radius: 50%;
+        transition: .5s; }
+    form .container #gem:checked ~ #gem-switch::after {
+      left: 26px; }
+    form .container #gem:checked ~ #gem-text {
+      opacity: 0; }
+    form .container #tariff, form .container #status {
+      float: right;
+      padding: 12px 20px;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      -ms-border-radius: 40px;
       border-radius: 40px;
-      color: white;
-      line-height: 30px;
-      font-size: 11px;
-      word-spacing: 12px;
-      padding-left: 5px; }
-    form #gem-switch::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -3px;
-      left: 2px;
-      width: 26px;
-      height: 26px;
-      background-color: white;
-      border-radius: 50%;
-      transition: .5s; }
-  form #gem:checked ~ #gem-switch::after {
-    left: 26px; }
-  form #gem:checked ~ #gem-text {
-    opacity: 0; }
-  form #tariff, form #status {
-    float: right;
-    padding: 12px 20px;
+      border: 1px solid #c5c5c5;
+      width: 150px; }
+    form .container .info {
+      position: relative;
+      display: inline-block; }
+      form .container .info .info__text {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: none;
+        background-color: white;
+        width: 150px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #c5c5c5;
+        padding: 5px;
+        font-size: 10px;
+        font-weight: normal;
+        z-index: 1; }
+      form .container .info .info__symbol {
+        display: inline-block;
+        border: 1px solid #c5c5c5;
+        color: #c5c5c5;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        position: relative;
+        line-height: 18px;
+        font-size: 13px;
+        cursor: pointer; }
+        form .container .info .info__symbol:hover ~ .info__text {
+          display: block; }
+  form .submit {
+    color: #e60000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 18px 60px;
+    border: 1px solid #e60000;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
-    border-radius: 40px;
-    border: 1px solid #c5c5c5;
-    width: 150px; }
-  form .info {
-    position: relative;
-    display: inline-block; }
-    form .info .info__text {
-      position: absolute;
-      left: 20px;
-      top: 0;
-      display: none;
-      background-color: white;
-      width: 150px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      border-radius: 5px;
-      border: 1px solid #c5c5c5;
-      padding: 5px;
-      font-size: 10px;
-      font-weight: normal;
-      z-index: 1; }
-    form .info .info__symbol {
-      display: inline-block;
-      border: 1px solid #c5c5c5;
-      color: #c5c5c5;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      text-align: center;
-      position: relative;
-      line-height: 18px;
-      font-size: 13px;
-      cursor: pointer; }
-      form .info .info__symbol:hover ~ .info__text {
-        display: block; }
+    border-radius: 40px; }
+    form .submit:hover {
+      color: white;
+      background-color: #e60000; }
+  form #slide {
+    display: inline-block;
+    width: 50%;
+    margin-left: -5px; }
 
-.submit {
-  color: #e60000;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 18px 60px;
-  border: 1px solid #e60000;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  transition: .5s;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  border-radius: 40px; }
-  .submit:hover {
-    color: white;
-    background-color: #e60000; }
-
-#slide {
-  display: inline-block;
-  width: 50%;
-  margin-left: -5px; }
-
+/* ---------style for range----------- */
 .fsslider {
   position: relative;
   min-width: 150px;
@@ -165,9 +164,7 @@ form {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #000; }
-
-.fsslider {
+  color: #000;
   text-align: center;
   line-height: 24px;
   font-size: 11px; }

@@ -3,13 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Form</title>
-	<script
-  		src="https://code.jquery.com/jquery-3.2.1.min.js"
-  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  		crossorigin="anonymous">
-  	</script>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="freshslider/freshslider.1.0.0.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">	
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,27 +14,24 @@
 			<div class="input-name">
 				<span>Вес изделия</span>
 			</div>
-			<input type="text" id="weight" value="15г">
+			<input name="productWeight" type="text" id="weight" value="15г">
 		</div>
-
 		<div class="container">
 			<div class="input-name">
 				<span>Проба металла</span>
 			</div>
-			<select name="" id="sample">
+			<select name="metallSample" id="sample">
 				<option value="585">585 проба</option>
 				<option value="750">750 проба</option>
 				<option value="999">999 проба</option>
 			</select>
 		</div>
-
 		<div class="container">		
-			<input type="checkbox" id="gem">
+			<input name="gemInProduct" type="checkbox" id="gem">
 			<label for="gem" id="gem-switch">Камни и вставки</label>
 			<span id="gem-text">Окончательная оценочная стоимость залога может отличаться от указанной в расчете
 			</span>
-		</div>
-	
+		</div>	
 		<div class="container">
 			<div class="input-name">
 				<span>Тарифный план</span>
@@ -47,35 +40,30 @@
 				<div class="info__text">
 					<span>Тарифный план — стандартная форма коммерческого предложения, в которой указывается перечень возможных услуг и порядок определения их стоимости.</span>
 				</div>
+			</div>			
 			</div>
-			
-			</div>
-			<select name="" id="tariff">
-				<option value="585">&#171;Простой&#187;</option>
-				<option value="750">&#171;Продвинутый&#187;</option>
-				<option value="999">&#171;Семейный&#187;</option>
+			<select name="tariff" id="tariff">
+				<option value="simple">&#171;Простой&#187;</option>
+				<option value="advanced">&#171;Продвинутый&#187;</option>
+				<option value="family">&#171;Семейный&#187;</option>
 			</select>
-		</div>
-	 
+		</div>	 
 		<div class="container">
 			<div class="input-name">
 				<span>Ваш дисконтный статус</span>
 			</div>
-			<select id="status">
-	  				<option>Без статуса</option>
-	  				<option>Премиум статус</option>
+			<select name="status" id="status">
+	  				<option value="no status">Без статуса</option>
+	  				<option value="Premium">Премиум статус</option>
 			</select>
 		</div>
-
 		<div class="container">
 			<div class="input-name">
 				<span>Срок кредитования до продления</span>
 			</div>
 			<div id="slide"></div>
 		</div>
-
-		<input type="submit" class="submit" value="Рассчитать кредит"> 
-		
+		<input type="submit" class="submit" value="Рассчитать кредит"> 		
 	</form>
 	<script src="script.js"></script>
 </body>
