@@ -53,9 +53,9 @@
 					</a>
 				</div>
 				<div class="header__right">
-					<a href="#" class="sprite sprite1"></a>
-					<span class="sprite sprite2"></span>
-					<a href="#" class="sprite sprite3"></a>
+					<span class="header__right-menu login-icon"><img src="images/login.svg" alt=""></span>
+					<span class="header__right-menu search-icon"><img src="images/search.svg" alt=""></span>
+					<span class="header__right-menu cart-icon"><img src="images/paper-bag.svg" alt=""></span>
 				</div>
 				<input type="text" class="search" placeholder="ПОИСК">
 			</div>
@@ -275,7 +275,7 @@
 		<div class="about-us">
 			<h2 class="title">О нас</h2>
 			<img src="images/about-us.png" alt="" class="about-us__img">
-			<p class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem possimus eveniet earum qui officiis obcaecati. Reiciendis illo quas nemo commodi debitis dolor possimus cumque, laudantium provident consequatur. Sint, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fugiat explicabo molestias itaque nihil quis culpa eveniet. Facilis perspiciatis aut debitis accusamus, laborum esse ea dolorem itaque sit beatae minus.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea iure eveniet cumque consequuntur perspiciatis sunt, illo nobis odit, inventore necessitatibus! Pariatur nesciunt officia veritatis eos quibusdam mollitia cupiditate quo qui.</p>
+			<p class="about-us__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взгляд рукописи, имени деревни текста за текстами толку встретил вдали домах прямо там путь ему точках ты снова рекламных бросил!.</p>
 		</div>
 		<div class="about">
 				<h2 class="title">У наших скетчбуков</h2>
@@ -408,7 +408,7 @@
 		});
 	</script>
 	<script>
-$(".sprite2").click(function() {
+$(".search-icon").click(function() {
   $('.search').toggleClass('search-visible');
   });
 
@@ -420,13 +420,13 @@ $(".menu-exit").click(function() {
   $('.menu').toggleClass('menu-visible');
   });
 
-$(".sprite3").click(function(){
+$(".cart-icon").click(function(){
 	$(".cart").toggleClass('cart-visible');
 });
 $(".cart-exit").click(function() {
   $('.cart').toggleClass('cart-visible');
   });
-$(".sprite1").click(function(){
+$(".login-icon").click(function(){
 	$(".login").toggleClass('login-visible');
 });
 $(".login-exit").click(function() {

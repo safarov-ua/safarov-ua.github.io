@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'PT Sans', sans-serif;
+}
+
+$red-color: #e60000;
+$border-color: #c5c5c5;
+$checkbox-color: #7f7f7f;
+$form-background: #f6f6f6;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin appearance($value){
+	-webkit-appearance: $value;
+	 -moz-appearance: $value;
+	 appearance: $value;
+}
+
+
+form{
+	max-width: 415px;
+	margin:0 auto;
+	overflow: hidden;
+	padding: 5px;
+	font-size: 16px;
+	background-color: $form-background;
+
+	select, input{
+		outline: none;
+		background-color: transparent;
+	}
+	select{
+		@include appearance(none);
+	 	background-image: url(arrow.png);
+	 	background-repeat: no-repeat;
+	 	background-position: 90% 50%; 
+	 	cursor: pointer;
+	}
+	select::-ms-expand{
+		display: none;
+	}
+	.container{
+		margin-bottom: 40px;
+		position: relative;
+	}
+	.input-name{
+		display: inline-block;
+		width: 50%;
+		padding: 12px 0;
+		font-weight: bold;		
+	}
+	#weight{
+		float: right;
+		width: 185px;
+		border: none;
+		border-bottom: 1px solid $border-color;
+		padding: 12px 0;
+		background-position: 100% 50%;
+	}
+	#sample{
+		@extend #weight;
+		position: relative;
+	}
+	#gem{
+		display: none;
+	}
+	#gem-text{
+		display: inline-block;
+		color: $red-color;
+		font-size: 13px;
+		transition: .3s;
+		vertical-align: middle;
+		width: 50%;
+		margin-left: -5px;
+
+	}
+	#gem-switch{
+		position: relative;
+		padding-left: 65px;
+		display: inline-block;
+		width: 50%;
+		&::before{
+			content:'нет да';
+			display: block;
+			position: absolute;
+			left: 0;
+			top:-5px;
+			width: 50px;
+			height: 30px;
+			background-color: $checkbox-color;
+			border-radius: 40px;
+			color: white;
+			line-height: 30px;
+			font-size: 11px;
+			word-spacing: 12px;
+			padding-left: 5px;
+		}
+		&::after{
+			content:'';
+			display: block;
+			position: absolute;
+			top:-3px;
+			left:2px;
+			width: 26px;
+			height: 26px;
+			background-color: white;
+			border-radius: 50%;
+			transition: .5s;
+
+		}
+	}
+	#gem:checked~#gem-switch::after{
+		left: 26px;
+	}
+	#gem:checked~#gem-text{
+		opacity: 0;
+	}
+	#tariff{
+		float: right;
+		padding: 12px 20px;
+		@include border-radius(40px);
+		border: 1px solid $border-color;
+		width: 150px;
+	}
+	.info{
+		position: relative;
+		display: inline-block;
+
+
+		.info__text{
+			position: absolute;
+			left: 20px;
+			top:0;
+			display: none;
+			background-color: white;
+			width: 150px;
+			@include border-radius(5px);
+			border: 1px solid $border-color;
+			padding: 5px;
+			font-size: 10px;
+			font-weight: normal;
+			z-index: 1;
+
+		}
+		.info__symbol{
+			display: inline-block;
+			border: 1px solid $border-color;
+			color: $border-color;
+			border-radius: 50%;
+			width: 18px;
+			height: 18px;
+			text-align: center;
+			position: relative;
+			line-height: 18px;
+			font-size: 13px;
+			cursor: pointer;
+			&:hover ~ .info__text{
+				display: block;
+
+			}
+		}
+
+	}
+	#status{
+		@extend #tariff;
+	}
+
+	
+}
+
+
+
+
+.submit{
+	color: $red-color;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 18px 60px;
+	border: 1px solid $red-color;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	transition: .5s;
+	@include border-radius(40px);
+	&:hover{
+		color: white;
+		background-color: $red-color;
+	}
+}
+
+
+#slide{
+	display: inline-block;
+	width: 50%;
+	margin-left: -5px;
+}
+.fsslider {
+position: relative;
+min-width: 150px;
+height: 24px;
+display: inline-block;
+width: 100%;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+color: #000;
+}
+.fsslider {
+text-align: center;
+line-height: 24px;
+font-size: 11px;
+}
+.fsslider > * {
+position: absolute;
+top: 50%;
+cursor: pointer;
+}
+.fsslider > .fsfull-value, .fsslider > .fssel-value {
+margin-top: -1px;
+height: 2px;
+left: 0;
+right: 0;
+
+}
+.fsslider > .fsfull-value {
+width: 100%;
+background: $border-color;
+}
+.fsslider > .fssel-left, .fsslider > .fssel-right, .fsslider > .fscaret {
+top: -10px;
+width: 75px;
+height: 40px;
+line-height: 40px;
+@include border-radius(40px);
+border: 1px solid $border-color;
+background-color: white;
+font-weight: bold;
+}
+.fsslider.fsdisabled {
+color: #c8c8c8;
+}
+.fsslider.fsdisabled > .fssel-value {
+background: #c8c8c8;
+}
