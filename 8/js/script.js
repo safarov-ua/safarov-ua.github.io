@@ -74,9 +74,12 @@ menu.onclick = function(){
 /*cart show show/hide*/
 var cartIcon = document.querySelector(".cart-icon");
 var cart = document.querySelector(".cart");
-
+var cartClose = document.querySelector(".cart-close")
 cartIcon.onclick = function(){
-	cart.classList.toggle("cart-visible");
+	cart.classList.add("cart-visible");
+}
+cartClose.onclick = function(){
+	cart.classList.remove("cart-visible");
 }
 /*place-order show/hide*/
 var order = document.querySelector(".place-order");
