@@ -38,9 +38,140 @@
 			<div class="cart-icon__count">12</div>
 		</div>
 		<div class="cart">
+			<div class="block-title">
+				<h2>корзина</h2>
+				<span>выбранные товары</span>
+			</div>
+
+			<div class="cart-product">
+				<a href="" class="cart-product__image">
+					<img src="images/products/mobile1.png" alt="">
+				</a>
+				<div class="cart-product__remove"></div>
+				<div class="cart-product__info">
+					<span class="cart-product__name">- amazing -</span>
+					<div class="cart-product__count">	
+						<span class="cart-product__count-minus">-</span>
+						<span class="cart-product__count-value">1 шт</span>
+						<span class="cart-product__count-plus">+</span>
+					</div>
+				</div>
+				<span class="cart-product__price">1241 грн</span>
+			</div>
+			<div class="cart-product">
+				<a href="" class="cart-product__image">
+					<img src="images/products/classic1.png" alt="">
+				</a>
+				<div class="cart-product__remove"></div>
+				<div class="cart-product__info">
+					<span class="cart-product__name">- superpuper -</span>
+					<div class="cart-product__count">	
+						<span class="cart-product__count-minus">-</span>
+						<span class="cart-product__count-value">1 шт</span>
+						<span class="cart-product__count-plus">+</span>
+					</div>
+				</div>
+				<span class="cart-product__price">1241 грн</span>
+			</div>
+			<div class="cart-product">
+				<a href="" class="cart-product__image">
+					<img src="images/products/classic1.png" alt="">
+				</a>
+				<div class="cart-product__remove"></div>
+				<div class="cart-product__info">
+					<span class="cart-product__name">- superpuper -</span>
+					<div class="cart-product__count">	
+						<span class="cart-product__count-minus">-</span>
+						<span class="cart-product__count-value">1 шт</span>
+						<span class="cart-product__count-plus">+</span>
+					</div>
+				</div>
+				<span class="cart-product__price">1241 грн</span>
+			</div>
+			<div class="cart-product">
+				<a href="" class="cart-product__image">
+					<img src="images/products/classic1.png" alt="">
+				</a>
+				<div class="cart-product__remove"></div>
+				<div class="cart-product__info">
+					<span class="cart-product__name">- superpuper -</span>
+					<div class="cart-product__count">	
+						<span class="cart-product__count-minus">-</span>
+						<span class="cart-product__count-value">1 шт</span>
+						<span class="cart-product__count-plus">+</span>
+					</div>
+				</div>
+				<span class="cart-product__price">1241 грн</span>
+			</div>
+			<div class="cart-product">
+				<a href="" class="cart-product__image">
+					<img src="images/products/classic1.png" alt="">
+				</a>
+				<div class="cart-product__remove"></div>
+				<div class="cart-product__info">
+					<span class="cart-product__name">- superpuper -</span>
+					<div class="cart-product__count">	
+						<span class="cart-product__count-minus">-</span>
+						<span class="cart-product__count-value">1 шт</span>
+						<span class="cart-product__count-plus">+</span>
+					</div>
+				</div>
+				<span class="cart-product__price">1241 грн</span>
+			</div>
+			<div class="cart-total">
+				<span class="cart-total__name">Итого:</span>
+				<span class="cart-total__price">1246 грн</span>
+			</div>
+			<button class="cart-button">Оформить заказ</button>
 			
 		</div>
+		<div class="place-order">
+				<div class="place-order-close">
+					<span>назад</span>
+				</div>
+				<div class="block-title">
+					<h2>Оформление заказа</h2>
+					<span>введите Ваши данные</span>
+				</div>
 
+				<form action="" class="order-form">
+					<div class="order-form__group">
+						<label for="order-form__name">Имя</label>
+						<input type="text" class="order-form__input" id="order-form__name">
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__lastname">Фамилия</label>
+						<input type="text" class="order-form__input" id="order-form__lastname">
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__mail">Email</label>
+						<input type="email" class="order-form__input" id="order-form__mail">
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__phone">Телефон</label>
+						<input type="tel" class="order-form__input" id="order-form__phone">
+					</div>
+
+					<div class="order-form__group">
+							<p><input name="dzen" type="radio" value="pickup">Самовывоз</p>
+							<p><input name="dzen" type="radio" value="delivery">Доставка по Украине</p>
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__city">Город</label>
+						<input type="tel" class="order-form__input" id="order-form__city">
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__post">№ Отделения</label>
+						<input type="tel" class="order-form__input" id="order-form__post">
+					</div>
+					<div class="order-form__group">
+						<label for="order-form__area">Комментарий к заказу</label>
+						<textarea class="order-form__textarea" id="order-form__area"></textarea>
+					</div>
+					<button class="order-form__buy">Подтвердить заказ</button>
+										
+				</form>
+			</div>
 
 
 
@@ -96,7 +227,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -111,7 +242,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -126,7 +257,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -141,7 +272,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -156,7 +287,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 				</div>
@@ -179,7 +310,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс борд<br>очень крутой</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -194,7 +325,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -209,7 +340,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -224,7 +355,7 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 					<div class="product">
@@ -239,11 +370,14 @@
 						<span class="product__name">- amazing -</span>
 						<span class="product__description">баланс с заоядом<br>джунглей</span>
 						<span class="product__price">1300 грн.</span>
-						<button class="product__buy">в корзину</button>
+						<button class="product__to-cart">в корзину</button>
 					</div>					
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="constructor container">
+			
 		</div>
 		<div class="gallery container" id="gallery">
 			<div class="block-title">
