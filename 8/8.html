@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/fotorama/fotorama.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
 			<span class="bar__icon bar__icon-third"></span>
 		</div>
 		<nav class="nav">
+			<div class="nav-close"></div>
 			<ul class="nav__list">
 				<li class="nav__item"><a href="#production" class="nav__link">баланс борды</a></li>
 				<li class="nav__item"><a href="" class="nav__link">конструктор</a></li>
@@ -146,7 +148,7 @@
 					</div>
 					<div class="order-form__group">
 						<label for="order-form__mail">Email</label>
-						<input type="email" class="order-form__input" id="order-form__mail">
+						<input type="email" class="order-form__input" id="order-form__mail" placeholder="john.doe@email.com">
 					</div>
 					<div class="order-form__group">
 						<label for="order-form__phone">Телефон</label>
@@ -205,11 +207,78 @@
 	</header>
 
 	<div class="wrapper">
+		<div class="scroll-top">наверх</div>
 		<div class="production container" id="production">
 			<div class="block-title">
 				<h2>баланс борды</h2>
 				<span>выбери свой баланс борд</span>
 			</div>
+			<div class="modal">
+				<div class="modal-content">				
+					<div class="modal-close"></div>
+					<h2 class="modal-title">-amigo-</h2>
+					<div class="modal-gallery">
+						<div class="fotorama" data-nav="thumbs" data-thumbwidth="50%" data-thumbborderwidth="2"
+							data-loop="true" data-arrows="false" data-width="100%" data-navposition="top" data-thumbmargin="5">
+							<img src="images/popup/3.png" alt="">
+							<img src="images/popup/1.jpg" alt="">
+							<img src="images/popup/4.jpg" alt="">
+							<img src="images/popup/2.jpg" alt="">
+							<img src="images/gallery/gallery3.jpg" alt="">
+							<img src="images/gallery/gallery3.jpg" alt="">
+						</div>
+					</div>					
+					<div class="modal-description">
+						<h3 class="modal-description__title">Описание</h3>
+						<p class="modal-description__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam, tempora adipisci debitis voluptates. Labore tenetur ipsa itaque ea vero repellat fuga doloribus non facere animi molestiae dolorem provident quasi veniam accusamus, ipsum minima ipsam architecto. Possimus officiis facilis iusto quod modi atque dolorum veniam reiciendis? Voluptate porro tempora quam?</p>
+						<div class="modal-description__properties">
+						<h3 class="modal-description__title">Характеристики</h3>
+							<ul>
+								<li>Длина: 75 см</li>
+								<li>Ширина: 40 см</li>
+								<li>Вес: 1.5 кг</li>
+								<li>Диаметр ролика: 16 см</li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="modal-description-buy">
+							<span class="modal-description__price">1241 грн</span>
+							<button class="modal-description__button">в корзину</button>							
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class="production__row">
 				<div class="production__name">
 					<h3>серия</h3>
@@ -508,6 +577,7 @@
 	<script src="libs/jquery/jquery.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/xgallerify/jquery.xgallerify.min.js"></script>
+	<script src="libs/fotorama/fotorama.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

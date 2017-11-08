@@ -114,7 +114,7 @@ body {
 .cart .block-title {
   margin: 20px 50px 25px; }
 
-.cart-close {
+.cart-close, .nav-close, .modal-close {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -122,7 +122,7 @@ body {
   top: 45px;
   transform: translateY(-50%);
   cursor: pointer; }
-  .cart-close::before {
+  .cart-close::before, .nav-close::before, .modal-close::before {
     content: '';
     display: block;
     position: absolute;
@@ -133,7 +133,7 @@ body {
     background-color: #b5b5b5;
     transform: rotate(-45deg);
     transition: .4s; }
-  .cart-close::after {
+  .cart-close::after, .nav-close::after, .modal-close::after {
     content: '';
     display: block;
     position: absolute;
@@ -144,10 +144,10 @@ body {
     background-color: #b5b5b5;
     transform: rotate(45deg);
     transition: .4s; }
-  .cart-close:hover::before {
+  .cart-close:hover::before, .nav-close:hover::before, .modal-close:hover::before {
     background-color: #000;
     transform: rotate(45deg); }
-  .cart-close:hover::after {
+  .cart-close:hover::after, .nav-close:hover::after, .modal-close:hover::after {
     background-color: #000;
     transform: rotate(-45deg); }
 
@@ -427,6 +427,30 @@ body {
   padding: 0 30px;
   position: relative; }
 
+.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  z-index: 14;
+  padding-right: 35px;
+  text-align: center;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  color: #b5b5b5;
+  cursor: pointer;
+  transition: .4s; }
+  .scroll-top::before {
+    content: "\2192";
+    font-size: 28px;
+    color: black;
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    transition: .4s; }
+  .scroll-top:hover::before {
+    right: -8px; }
+
 .container {
   margin-top: 150px;
   padding-top: 1px; }
@@ -451,6 +475,74 @@ body {
       position: absolute;
       right: -65px;
       top: 50%; }
+
+.modal {
+  position: fixed;
+  z-index: 15;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.modal-content {
+  background-color: #fff;
+  margin: 30px auto 0;
+  width: 80%;
+  height: calc(100vh - 60px);
+  padding: 15px;
+  position: relative;
+  font-size: 0;
+  overflow-y: auto; }
+
+.modal-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Arimo", sans-serif;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.modal-gallery, .modal-description {
+  display: inline-block;
+  width: 50%;
+  font-size: 14px;
+  vertical-align: top;
+  margin-top: 60px;
+  padding: 15px; }
+
+.modal-description {
+  padding-right: 50px; }
+
+.modal-description__title {
+  font-size: 16px;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  margin-top: 30px; }
+
+.modal-description__about {
+  margin-top: 15px;
+  line-height: 1.5;
+  letter-spacing: 1px; }
+
+.modal-description__properties ul {
+  margin-top: 15px;
+  list-style: none;
+  line-height: 1.5;
+  letter-spacing: 1px; }
+
+.modal-description-buy {
+  text-align: right;
+  margin-top: 30px; }
+
+.modal-description__price {
+  font-family: "Arimo", sans-serif;
+  font-size: 18px; }
+
+.modal-description__button {
+  margin-left: 50px; }
 
 .production__row {
   position: relative;
@@ -555,7 +647,7 @@ body {
   font-family: "Arimo", sans-serif;
   margin-top: 15px; }
 
-.product__to-cart, .cart-button, .order-form__buy {
+.product__to-cart, .cart-button, .order-form__buy, .modal-description__button {
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 15px;
@@ -568,7 +660,7 @@ body {
   transition: .4s;
   cursor: pointer;
   outline: none; }
-  .product__to-cart:hover, .cart-button:hover, .order-form__buy:hover {
+  .product__to-cart:hover, .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover {
     color: white;
     background-color: #000; }
 
@@ -767,6 +859,19 @@ body {
 .slick-next {
   right: 100px; }
 
+/* fotorama customize */
+.fotorama__nav-wrap {
+  margin-right: 50px;
+  margin-left: 50px; }
+
+.fotorama__thumb {
+  background-color: transparent;
+  padding: 10px; }
+
+.fotorama__thumb-border {
+  border-color: #b5b5b5;
+  background-image: none; }
+
 @media screen and (max-width: 1280px) {
   .comments__item {
     margin: 10px 15px; } }
@@ -790,6 +895,9 @@ body {
 
   .header__slider {
     width: 100%; }
+
+  .modal-content {
+    width: 90%; }
 
   .about__left p {
     padding: 10px 20px 50px 10px; } }
@@ -819,6 +927,17 @@ body {
 
   .order-form {
     width: 60%; }
+
+  .modal-description, .modal-gallery {
+    width: 100%;
+    display: block; }
+
+  .modal-gallery {
+    margin-top: 50px; }
+
+  .modal-description {
+    padding-right: 15px;
+    margin-top: 10px; }
 
   .about__left {
     width: 100%;
