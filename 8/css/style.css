@@ -303,9 +303,33 @@ body {
     margin-left: 15px;
     font-size: 18px; }
 
+.product__to-cart, .cart-button, .order-form__buy, .modal-description__button {
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 25px;
+  transition: .4s;
+  cursor: pointer;
+  outline: none; }
+  .product__to-cart:hover, .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover {
+    background-color: #000;
+    color: #fff; }
+
 .cart-button, .order-form__buy {
   display: block;
   margin: 30px auto; }
+
+.cart-button, .order-form__buy, .modal-description__button {
+  background-color: #000;
+  color: #fff; }
+  .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover {
+    background-color: #fff;
+    color: #000; }
 
 .place-order {
   position: absolute;
@@ -348,6 +372,9 @@ body {
 .order-form__group {
   margin-top: 35px; }
 
+.form__group-hide {
+  display: none; }
+
 .order-form__input {
   width: 60%;
   outline: none;
@@ -372,6 +399,15 @@ body {
     content: '';
     display: block;
     clear: both; }
+
+.delivery-info {
+  width: 80%;
+  color: #b5b5b5;
+  display: none;
+  margin: 0 auto; }
+
+.delivery-change:checked ~ .delivery-info {
+  display: block; }
 
 .place-order .block-title {
   margin: 20px 50px 10px; }
@@ -417,10 +453,10 @@ body {
   height: 100%; }
 
 .header__sliderItem-img {
-  height: 100%;
-  width: auto; }
+  height: auto;
+  width: 100%; }
 
-/*  */
+/*-------wrapper----------*/
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -452,7 +488,7 @@ body {
     right: -8px; }
 
 .container {
-  margin-top: 150px;
+  margin-top: 130px;
   padding-top: 1px; }
 
 .block-title {
@@ -497,9 +533,10 @@ body {
   overflow-y: auto; }
 
 .modal-title {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
   font-family: "Arimo", sans-serif;
+  font-weight: 400;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -511,7 +548,7 @@ body {
   font-size: 14px;
   vertical-align: top;
   margin-top: 60px;
-  padding: 15px; }
+  padding: 0 15px 15px; }
 
 .modal-description {
   padding-right: 50px; }
@@ -541,7 +578,7 @@ body {
   font-family: "Arimo", sans-serif;
   font-size: 18px; }
 
-.modal-description__button {
+.modal-description .modal-description__button {
   margin-left: 50px; }
 
 .production__row {
@@ -646,23 +683,6 @@ body {
   display: block;
   font-family: "Arimo", sans-serif;
   margin-top: 15px; }
-
-.product__to-cart, .cart-button, .order-form__buy, .modal-description__button {
-  margin-top: 20px;
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: #fff;
-  text-transform: uppercase;
-  font-family: "Arimo", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 6px 25px;
-  transition: .4s;
-  cursor: pointer;
-  outline: none; }
-  .product__to-cart:hover, .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover {
-    color: white;
-    background-color: #000; }
 
 .product__image:hover .more {
   opacity: 1; }
@@ -893,9 +913,6 @@ body {
     display: block;
     margin-top: 15px; }
 
-  .header__slider {
-    width: 100%; }
-
   .modal-content {
     width: 90%; }
 
@@ -904,6 +921,9 @@ body {
 @media screen and (max-width: 768px) {
   .header__video {
     display: none; }
+
+  .header__slider {
+    width: 100%; }
 
   .nav, .cart, .place-order {
     width: 100%; }
@@ -928,6 +948,9 @@ body {
   .order-form {
     width: 60%; }
 
+  .scroll-top {
+    right: -15px; }
+
   .modal-description, .modal-gallery {
     width: 100%;
     display: block; }
@@ -938,6 +961,12 @@ body {
   .modal-description {
     padding-right: 15px;
     margin-top: 10px; }
+
+  .container {
+    margin-top: 70px; }
+
+  .production__row {
+    margin-bottom: 140px; }
 
   .about__left {
     width: 100%;
@@ -974,6 +1003,10 @@ body {
 
   .cart .block-title, .place-order .block-title {
     margin-left: 30px; }
+
+  .modal-close {
+    top: 20px;
+    right: 20px; }
 
   .comments__item {
     margin: 10px 5px; }

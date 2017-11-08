@@ -78,7 +78,8 @@ navClose.onclick = function(){
 /*cart show show/hide*/
 var cartIcon = document.querySelector(".cart-icon");
 var cart = document.querySelector(".cart");
-var cartClose = document.querySelector(".cart-close")
+var cartClose = document.querySelector(".cart-close");
+
 cartIcon.onclick = function(){
 	cart.classList.add("cart-visible");
 }
@@ -96,14 +97,38 @@ cartButton.onclick = function(){
 closeCart.onclick = function(){
 	order.classList.remove("place-order-visible");
 }
+/*if ukraine delivery show town*/
+var delivery = document.querySelectorAll(".delivery-change");
 
+for(var i = 0; i<delivery.length; i++){
+	delivery[i].onchange = function(){
+
+	var adress = document.querySelectorAll(".form__group-hide");
+
+		if(this.value == "delivery"){
+			for(var j = 0;j<adress.length;j++){
+				adress[j].style.display = "block";
+			}			
+		}
+		else{
+			for(var j = 0;j<adress.length;j++){
+				adress[j].style.display = "none";
+			}
+		}
+	}
+}
+
+	
 /*modal show/hide*/
 var modal = document.querySelector(".modal");
 var modalClose = document.querySelector(".modal-close");
 var modalContent = document.querySelector(".modalContent");
 
-modalClose.onclick = function(){
-	modal.style.display = "none";
+
+window.onclick = function(evt){
+	if(evt.target == modal || evt.target == modalClose){
+		modal.style.display = "none";
+	}
 }
 
 /*pictures in gallery*/
@@ -127,7 +152,7 @@ window.onscroll = function(){
 };
 
 top.onclick = function(){
-	console.log(5)
+
 	$('body').animate({'scrollTop': 0},1000);
 	$('html').animate({'scrollTop': 0},1000);
 }
@@ -138,7 +163,7 @@ var page = $('html, body');
 $('a[href^="#"]').click(function(){
 
 var target = $(this).attr('href');
-console.log(target)
+
 page.animate({scrollTop: $(target).offset().top}, 800);
 return false;
 });

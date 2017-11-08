@@ -156,16 +156,24 @@
 					</div>
 
 					<div class="order-form__group">
-							<p><input name="dzen" type="radio" value="pickup">Самовывоз</p>
-							<p><input name="dzen" type="radio" value="delivery">Доставка по Украине</p>
+							<div class="">
+								<input class="pickup delivery-change" name="dzen" type="radio" value="pickup" id="pickup" checked>
+								<label for="pickup">Самовывоз</label>
+								<p class="delivery-info">Забрать Ваш заказ вы можете в Харькове в районе м. Алексеевская в любое удобное для Вас время с 10:00 до 18:00. Предварительно согласовав с менеджером. </p>	
+							</div>
+							<div class="">
+								<input class="ukr-delivery delivery-change" name="dzen" type="radio" value="delivery" id="ukrdelivery">
+								<label for="ukrdelivery">Доставка по Украине</label>
+								<p class="delivery-info">Список городов, куда осуществляет доставку компания "Новая Почта" и ближайщий к вам пункт выдачи посылок, можете найти на официальном сайте. Обычно товар можно забрать на следующий день после отправки.</p>
+							</div>
 					</div>
-					<div class="order-form__group">
+					<div class="order-form__group form__group-hide">
 						<label for="order-form__city">Город</label>
-						<input type="tel" class="order-form__input" id="order-form__city">
+						<input type="text" class="order-form__input" id="order-form__city">
 					</div>
-					<div class="order-form__group">
+					<div class="order-form__group form__group-hide">
 						<label for="order-form__post">№ Отделения</label>
-						<input type="tel" class="order-form__input" id="order-form__post">
+						<input type="text" class="order-form__input" id="order-form__post">
 					</div>
 					<div class="order-form__group">
 						<label for="order-form__area">Комментарий к заказу</label>
@@ -216,16 +224,15 @@
 			<div class="modal">
 				<div class="modal-content">				
 					<div class="modal-close"></div>
-					<h2 class="modal-title">-amigo-</h2>
+					<h2 class="modal-title">- amigo -</h2>
 					<div class="modal-gallery">
-						<div class="fotorama" data-nav="thumbs" data-thumbwidth="50%" data-thumbborderwidth="2"
-							data-loop="true" data-arrows="false" data-width="100%" data-navposition="top" data-thumbmargin="5">
+						<div class="fotorama" data-nav="thumbs" data-thumbwidth="50%" data-thumbborderwidth="1"
+							data-loop="true" data-arrows="false" data-width="100%" data-height="70%" data-navposition="top" data-thumbmargin="5">
 							<img src="images/popup/3.png" alt="">
-							<img src="images/popup/1.jpg" alt="">
-							<img src="images/popup/4.jpg" alt="">
+							<img src="images/popup/2.png" alt="">
+							<img src="images/popup/1.png" alt="">
+							<img src="images/popup/3.jpg" alt="">
 							<img src="images/popup/2.jpg" alt="">
-							<img src="images/gallery/gallery3.jpg" alt="">
-							<img src="images/gallery/gallery3.jpg" alt="">
 						</div>
 					</div>					
 					<div class="modal-description">
