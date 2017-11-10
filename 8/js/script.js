@@ -1,14 +1,22 @@
 document.body.onload = function(){ 
 	/*preloader hide*/
 	var preloader = document.querySelector(".preloader");
-	setTimeout(function(){preloader.style.display = "none"},1000)
+	setTimeout(function(){preloader.style.display = "none"},1000);
 	/*carousel*/
 
 	$(".header__slider").slick({
-	autoplay: true,
-	dots: false,
-	arrows: false,
-		});
+		autoplay: true,
+		dots: true,
+		arrows: false,
+		responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        dots: false,
+      }
+    },
+  ]
+	});
 
 	$(".production__slider").slick({
 		autoplay: false,

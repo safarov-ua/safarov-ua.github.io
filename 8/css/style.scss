@@ -16,30 +16,20 @@ body{
 	font-weight: 300;
 }
 @keyframes tube {
-from {transform: translateX()}
-10% {transform: translateX(18px)}
-20% {transform: translateX(-16px)}
-30% {transform: translateX(25px)}
-40% {transform: translateX(-23px)}
-50% {transform: translateX(10px)}
-60% {transform: translateX(-15px)}
-70% {transform: translateX(15px)}
-80% {transform: translateX(-10px)}
-90% {transform: translateX(5px)}
-to {transform: translateX()}
+from {transform: translateX(-50%)}
+20% {transform: translateX(calc(-50% + 28px))}
+40% {transform: translateX(calc(-50% - 20px))}
+60% {transform: translateX(calc(-50% + 15px))}
+80% {transform: translateX(calc(-50% - 10px))}
+to {transform: translateX(-50% )}
 }
 @keyframes deck {
-from {transform: translateX(0) rotate(0)}
-10% {transform: translateX(20px) rotate(10deg)}
-20% {transform: translateX(-25px) rotate(-15deg)}
-30% {transform: translateX(24px) rotate(20deg)}
-40% {transform: translateX(-27px) rotate(-22deg)}
-50% {transform: translateX(10px) rotate(18deg)}
-60% {transform: translateX(-15px) rotate(-14deg)}
-70% {transform: translateX(15px) rotate(11deg)}
-80% {transform: translateX(-10px) rotate(-6deg)}
-90% {transform: translateX(10px) rotate(3deg)}
-to {transform: translateX() rotate()}
+from {transform: translateX(-50%) rotate(0)}
+20% {transform: translateX(calc(-50% + 20px)) rotate(15deg)}
+40% {transform: translateX(calc(-50% - 25px)) rotate(-18deg)}
+60% {transform: translateX(calc(-50% + 15px)) rotate(13deg)}
+80% {transform: translateX(calc(-50% - 10px)) rotate(-8deg)}
+to {transform: translateX(-50% ) rotate()}
 }
 .preloader{
 	position: fixed;
@@ -50,39 +40,48 @@ to {transform: translateX() rotate()}
 	background-color: #fff;
 	z-index: 99;
 }
+.preloader-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+}
 .preloader-tube{
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border: 5px solid black;
   position: absolute;
-  top: 100px;
-  left: 50%; 
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   transform-origin: center center;
-  animation: tube 5s infinite linear;
+  animation: tube 3s infinite linear;
   
   
 }
 .preloader-deck{
   width: 250px;
-  height: 6px;
+  height: 5px;
   background-color: #000;
   border-top-radius: 5px;
   position: absolute;
-  top: 96px;
-  left: 43%;
+  top: 6px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
   transform-origin: center bottom;
-  animation: deck 5s infinite linear;
+  animation: deck 3s infinite linear;
 	&::after{
   		content: '';
   		display: block;
   		position: absolute;
   		border-bottom-left-radius: 5px;
   		width: 23px;
-  		height: 5px;
+  		height: 4px;
   		background-color: #000;
   		left: 0;
-  		bottom: -5px;
+  		bottom: -4px;
 	}
 	&::before{
   		content: '';
@@ -90,12 +89,80 @@ to {transform: translateX() rotate()}
   		position: absolute;
   		border-bottom-right-radius: 5px;
   		width: 23px;
-  		height: 5px;
+  		height: 4px;
   		background-color: #000;
   		right: 0;
-  		bottom: -5px;
+  		bottom: -4px;
+	}
+	span{
+		font-size: 20px;
+		position: absolute;
+		top: -25px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: $gray;
 	}
 }
+.floor{
+		width: 130px;
+		position: absolute;
+		height: 1px;
+		background-color: $gray;
+		bottom: -67px;
+		left: 50%;
+		transform: translateX(-50%);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ----------------------header---------------- */
@@ -110,6 +177,8 @@ to {transform: translateX() rotate()}
 }
 .logo{
 	position: absolute;
+	top: 30px;
+	left: 30px;
 	z-index: 9;
 }
 .bar{
@@ -675,6 +744,7 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 	height: 100%;
 	overflow: hidden;
 	font-size: 16px;
+	vertical-align: top;
 }
 .header__video video{
 	height: 100%;
@@ -875,6 +945,13 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 		display: inline-block;
 	}
 }
+.production-count{
+	font-size: 14px;
+	color: $gray;
+	position: absolute;
+	right: 165px;
+	top: -36px;
+}
 .count{
 	font-size: 12px;	
 	position: absolute;
@@ -965,9 +1042,7 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 	background-color: #9f87c0;
 }
 /* -----------gallery--------------- */
-.gallery{
 
-}
 .gallery__items{
 	text-align: center;
 	transition: .4s;
@@ -1174,6 +1249,35 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 }
 
 /* slickdots customize */
+ .header__slider .slick-dots{
+	bottom: 20px;
+	right: 120px;
+	text-align: right;
+	li{
+
+	display: inline-block;
+	margin: 0 20px;
+		button{
+			width: 55px;
+			height: 60px;
+			font-size: 36px;
+			font-family: $roboto;
+			font-weight: 300;
+			border: none;
+			background-color: transparent;
+			color: #000;
+			transition: .4s;		
+		}		
+	}
+	.slick-active{
+		button{
+				
+				font-size: 60px;
+				background-color: transparent;				
+		}
+	}
+}
+
 .slick-dots{
 	bottom: -50px;
 }
@@ -1240,6 +1344,20 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 	}
 }
 @media screen and(max-width: 1024px){
+	.header__slider .slick-dots{
+		right: 80px;
+		li{
+			margin: 0 15px;
+			button{
+				font-size: 30px;
+			}
+		}
+		.slick-active{
+			button{
+				font-size: 48px;
+			}
+		}
+	}
 	.cart-product__price{
 		float: none;
 		display: block;
@@ -1300,6 +1418,16 @@ input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
 	}
 	.scroll-top{
 		right: -15px;
+	}
+	.slick-prev{
+		left: auto;
+		right: 80px;
+	}
+	.slick-next{
+		right: 50px;
+	}
+	.production-count{
+		right: 110px;
 	}
 	.modal-content{
 		background-image: none;
