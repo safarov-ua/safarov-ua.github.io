@@ -640,7 +640,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
       top: 50%; }
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 15;
   left: 0;
