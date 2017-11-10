@@ -1,5 +1,7 @@
 document.body.onload = function(){ 
-
+	/*preloader hide*/
+	var preloader = document.querySelector(".preloader");
+	setTimeout(function(){preloader.style.display = "none"},1000)
 	/*carousel*/
 
 	$(".header__slider").slick({
@@ -157,7 +159,18 @@ top.onclick = function(){
 	$('html').animate({'scrollTop': 0},1000);
 }
 
-
+/*comments add*/
+var commentsShow = document.querySelector(".comment-button");
+var commentsBlock = document.querySelector(".comment-add");
+var commentClose = document.querySelector(".comment-add__close");
+commentsShow.onclick = function(){
+	commentsBlock.style.display = "block";
+	this.style.display = "none";	
+}
+commentClose.onclick = function(){
+	commentsBlock.style.display = "none";
+	commentsShow.style.display = "block";	
+}
 /*slow scroll page*/
 var page = $('html, body');
 $('a[href^="#"]').click(function(){
