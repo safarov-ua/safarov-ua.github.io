@@ -101,7 +101,8 @@ body {
     top: -25px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #b5b5b5; }
+    color: #b5b5b5;
+    font-family: sans-serif; }
 
 .floor {
   width: 130px;
@@ -1092,6 +1093,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   border-color: #b5b5b5;
   background-image: none; }
 
+/* --------------adaptive--------- */
 @media screen and (max-width: 1280px) {
   .comments__item {
     margin: 10px 15px; } }
