@@ -113,6 +113,20 @@ body {
   left: 50%;
   transform: translateX(-50%); }
 
+.info {
+  position: fixed;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px 2px rgba(206, 206, 206, 0.7);
+  font-size: 24px;
+  font-family: "Arimo", sans-serif;
+  text-align: center;
+  padding: 15px 20px;
+  z-index: 20; }
+
 /* ----------------------header---------------- */
 .header {
   max-width: 1920px;
@@ -640,7 +654,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
       top: 50%; }
 
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 15;
   left: 0;
@@ -661,7 +675,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   overflow-y: auto;
   background-image: url(../images/bgc.png);
   background-repeat: no-repeat;
-  background-position: right 120%;
+  background-position: right bottom;
   background-size: 250px auto; }
 
 .modal-title {
@@ -887,7 +901,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   position: relative;
   background-image: url(../images/bgc.png);
   background-repeat: no-repeat;
-  background-position: right 200px;
+  background-position: right bottom;
   background-size: 140px auto; }
 
 .comments__photo {
@@ -1182,6 +1196,10 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     width: 100%;
     display: block; }
 
+  .modal-title {
+    font-size: 20px;
+    top: 20px; }
+
   .modal-gallery {
     margin-top: 50px; }
 
@@ -1240,6 +1258,9 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   .modal-close {
     top: 20px;
     right: 20px; }
+
+  .modal-title {
+    font-size: 20px; }
 
   .comments__item {
     margin: 10px 5px; }

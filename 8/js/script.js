@@ -2,6 +2,27 @@ document.body.onload = function(){
 	/*preloader hide*/
 	var preloader = document.querySelector(".preloader");
 	setTimeout(function(){preloader.style.display = "none"},1000);
+	/*info show*/
+	
+	function showInfo(text){
+		var infoBlock = document.querySelector(".info");
+		infoBlock.textContent = text;
+		infoBlock.style.display = "block";		
+		setTimeout(function(){
+			infoBlock.style.display = "none"
+		},2000);
+	}
+	
+	var buttonToCart = document.querySelectorAll(".product__to-cart");
+	var modalButtonToCart = document.querySelector(".modal-description__button");
+
+	for(var i = 0; i<buttonToCart.length; i++){
+		buttonToCart[i].onclick = function(){showInfo("Товар добавлен в корзину")};
+	}
+	
+	modalButtonToCart.onclick = function(){showInfo("Товар добавлен в корзину")};
+
+
 	/*carousel*/
 
 	$(".header__slider").slick({
