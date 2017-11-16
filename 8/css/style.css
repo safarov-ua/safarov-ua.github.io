@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -845,6 +846,101 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 
 .mobile .product__image:hover .circle {
   background-color: #9f87c0; }
+
+/* ------------constructor-----------*/
+.constructor__forms, .constructor__properties {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top; }
+
+#handle-choose, #stoppers-choose {
+  display: none; }
+
+#handle-choose:checked ~ .handle-choose::after, #stoppers-choose:checked ~ .stoppers-choose::after {
+  transform: translateX(0); }
+
+.handle-choose, .stoppers-choose {
+  position: relative; }
+  .handle-choose::before, .stoppers-choose::before {
+    content: 'да нет';
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    width: 80px;
+    height: 2px;
+    background-color: #b5b5b5;
+    word-spacing: 35px;
+    line-height: 35px; }
+  .handle-choose::after, .stoppers-choose::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 70px;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    transform: translateX(65px);
+    border-radius: 50%;
+    transition: .5s; }
+
+.constructor__form {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center; }
+
+.constructor__form-classic {
+  width: 570px;
+  height: 330px;
+  border-radius: 165px;
+  background-image: url(../images/plywood.jpg); }
+
+.constructor__forms-img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+.handle {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 24px;
+  width: 80px;
+  border-radius: 12px;
+  background-color: #fff;
+  z-index: 10; }
+
+.constructor__properties {
+  font-size: 16px; }
+
+.constructor__properties-group {
+  margin-top: 40px; }
+
+.constructor__properties-rotate {
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #b5b5b5;
+  cursor: pointer;
+  outline: none;
+  transition: .4s; }
+  .constructor__properties-rotate:hover {
+    color: #000; }
+
+.constructor__properties-left:hover {
+  transform: rotate(-90deg); }
+
+.constructor__properties-right:hover {
+  transform: rotate(90deg); }
 
 /* -----------gallery--------------- */
 .gallery__items {

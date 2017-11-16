@@ -161,6 +161,82 @@ window.onclick = function(evt){
 		modal.style.display = "none";
 	}
 }
+/*constructor*/
+var handleChoose = document.querySelector("#handle-choose");
+var stoppersChoose = document.querySelector("#stoppers-choose");
+var constructorImg = document.querySelector(".constructor__properties-img");
+var price = 1000;
+handleChoose.onchange = function(){
+	var handle = document.querySelector(".handle");
+	if(handleChoose.checked == true){
+		handle.style.display = "block";		
+	}
+	else{
+		handle.style.display = "none";
+	}
+}
+stoppersChoose.onchange = function(){
+	if(stoppersChoose.checked == true){
+		price+= 100;
+	}
+	else{
+		price -= 100;
+	}
+}
+var boardImg = document.querySelector(".constructor__forms-img");
+
+
+constructorImg.oninput = function(){
+	boardImg.setAttribute("src", constructorImg.value);
+}
+
+var rotateRight = document.querySelector(".constructor__properties-right");
+var rotateLeft = document.querySelector(".constructor__properties-left");
+var degress = 0;
+rotateRight.onclick = function(){
+	var boardImgSrc = boardImg.getAttribute("src");
+	if(boardImgSrc == ''){
+		console.log(degress);
+	}
+	else{
+		console.log(degress);
+		degress += 90;
+		degress == 360 ? degress = 0 : degress = degress;
+		boardImg.style.transform = "rotate("+degress+"deg)";
+		console.log(degress)
+	}
+}
+
+rotateLeft.onclick = function(){
+	var boardImgSrc = boardImg.getAttribute("src");
+	if(boardImgSrc == ''){
+		console.log(degress);
+	}
+	else{
+		console.log(degress);
+		degress -= 90;
+		degress == -360 ? degress = 0 : degress = degress;
+		boardImg.style.transform = "rotate("+degress+"deg)";
+		console.log(degress)
+	}
+}
+
+var rotateImg = document.querySelectorAll(".constructor__properties-size");
+
+for(var i = 0; i<rotateImg.length; i++){
+	rotateImg[i].onchange = function(){
+
+
+		if(this.value == "width"){
+			boardImg.style.width = "100%";
+			boardImg.style.height = "auto";			
+		}
+		else{
+			boardImg.style.width = "auto";
+			boardImg.style.height = "100%";
+		}
+	}
+}
 
 /*pictures in gallery*/
 $('.gallery__items').gallerify({
