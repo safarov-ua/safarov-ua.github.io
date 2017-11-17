@@ -150,7 +150,7 @@ for(var i = 0; i<delivery.length; i++){
 }
 
 	
-/*modal show/hide*/
+/*---modal show/hide---*/
 var modal = document.querySelector(".modal");
 var modalClose = document.querySelector(".modal-close");
 var modalContent = document.querySelector(".modalContent");
@@ -161,11 +161,24 @@ window.onclick = function(evt){
 		modal.style.display = "none";
 	}
 }
-/*constructor*/
+/*---constructor---*/
+var shape = document.querySelector(".constructor__form");
+var shapeVariations = document.querySelectorAll(".constructor__properties-shape");
 var handleChoose = document.querySelector("#handle-choose");
 var stoppersChoose = document.querySelector("#stoppers-choose");
 var constructorImg = document.querySelector(".constructor__properties-img");
 var price = 1000;
+
+
+for(var j = 0; j<shapeVariations.length; j++){ //shape choose
+	shapeVariations[j].onchange = function(){
+		var shapeActive = shape.classList[1];
+		shape.classList.remove(shapeActive);
+		shape.classList.add("constructor__form-"+this.value);
+	}
+}
+
+
 handleChoose.onchange = function(){
 	var handle = document.querySelector(".handle");
 	if(handleChoose.checked == true){
@@ -217,7 +230,7 @@ rotateLeft.onclick = function(){
 		degress -= 90;
 		degress == -360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
-		console.log(degress)
+
 	}
 }
 
@@ -238,6 +251,24 @@ for(var i = 0; i<rotateImg.length; i++){
 	}
 }
 
+var imgPadding = document.querySelectorAll(".constructor__properties-padding");
+for(var j = 0; j< imgPadding.length; j++){
+	imgPadding[j].onclick = function(){
+		var a = this.dataset.direction;
+		if(a == "top"){
+			shape.style.paddingTop = this.value+"px";
+		}
+		else if(a == "right"){
+			shape.style.paddingRight = this.value+"px";
+		}
+		else if(a == "bottom"){
+			shape.style.paddingBottom = this.value+"px";
+		}
+		else if(a == "left"){
+			shape.style.paddingLeft = this.value+"px";
+		}
+	}
+}
 /*pictures in gallery*/
 $('.gallery__items').gallerify({
 	margin:3,

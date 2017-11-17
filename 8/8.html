@@ -431,18 +431,27 @@
 				</div>
 				<div class="constructor__properties">
 					<div class="constructor__properties-handle constructor__properties-group">
-						<input type="checkbox" id="handle-choose">
-						<label for="handle-choose" class="handle-choose">Ручка</label>
-					</div>
-					<div class="constructor__properties-stoppers constructor__properties-group">
-						<input type="checkbox" id="stoppers-choose" checked>
-						<label for="stoppers-choose" class="stoppers-choose">Стопоры</label>
+						<span class="constructor__properties-title">Выберите форму</span>
+						<input type="radio" name="board-shape" value="classic" 
+						class="constructor__properties-shape" checked>
+						<input type="radio" name="board-shape" value="mobile" 
+  						class="constructor__properties-shape">
+  						<input type="radio" name="board-shape" value="surf" 
+  						class="constructor__properties-shape">
 					</div>
 					<div class="constructor__properties-group">
+						<span class="constructor__properties-title">Загрузить изображение</span>
 						<input type="text" class="constructor__properties-img">
 					</div>
 					<div class="constructor__properties-group">
-						<span>Повернуть изображение</span>
+						<span class="constructor__properties-title">Растянуть</span>
+						<input type="radio" name="image-size" value="width" 
+						class="constructor__properties-size" checked>По всей ширине
+  						<input type="radio" name="image-size" value="height" 
+  						class="constructor__properties-size">По всей высоте<br>
+					</div>
+					<div class="constructor__properties-group">
+						<span class="constructor__properties-title">Повернуть</span>
 						<button class="constructor__properties-rotate constructor__properties-left">
 							<i class="fa fa-undo" aria-hidden="true"></i>
 						</button>
@@ -451,11 +460,28 @@
 						</button>
 					</div>
 					<div class="constructor__properties-group">
-						<input type="radio" name="image-size" value="width" 
-						class="constructor__properties-size" checked>По всей ширине<br>
-  						<input type="radio" name="image-size" value="height" 
-  						class="constructor__properties-size">По всей высоте<br>
+						<span class="constructor__properties-title">Отступы</span>
+						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="top" step="10">
+						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="bottom" step="10">
+						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="left" step="10">
+						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="right" step="10">
 					</div>
+					<div class="constructor__properties-handle constructor__properties-group">
+						<span class="constructor__properties-title">Ручка</span>
+						<input type="checkbox" id="handle-choose">
+						<label for="handle-choose" class="handle-choose"></label>
+					</div>
+					<div class="constructor__properties-stoppers constructor__properties-group">
+						<span class="constructor__properties-title">Стопоры</span>
+						<input type="checkbox" id="stoppers-choose" checked>
+						<label for="stoppers-choose" class="stoppers-choose"></label>
+					</div>				
+					<div class="constructor__properties-group-price">
+						<span class="constructor__properties-title-price">Цена:</span>
+						<span class="constructor__properties-price">1240 грн</span>
+						<button class="constructor__properties-button">В корзину</button>
+					</div>
+
 				</div>
 			</div>
 		</div>

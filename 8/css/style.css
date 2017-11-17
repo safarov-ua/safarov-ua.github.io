@@ -424,7 +424,7 @@ body {
     font-size: 18px; }
 
 .product__to-cart, .cart-button, .order-form__buy, .modal-description__button, .comment-button,
-.comment-add__button {
+.comment-add__button, .constructor__properties-button {
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 15px;
@@ -438,7 +438,7 @@ body {
   cursor: pointer;
   outline: none; }
   .product__to-cart:hover, .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover, .comment-button:hover,
-  .comment-add__button:hover {
+  .comment-add__button:hover, .constructor__properties-button:hover {
     background-color: #000;
     color: #fff; }
 
@@ -446,10 +446,10 @@ body {
   display: block;
   margin: 30px auto; }
 
-.cart-button, .order-form__buy, .modal-description__button {
+.cart-button, .order-form__buy, .modal-description__button, .constructor__properties-button {
   background-color: #000;
   color: #fff; }
-  .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover {
+  .cart-button:hover, .order-form__buy:hover, .modal-description__button:hover, .constructor__properties-button:hover {
     background-color: #fff;
     color: #000; }
 
@@ -849,9 +849,14 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 
 /* ------------constructor-----------*/
 .constructor__forms, .constructor__properties {
-  width: 50%;
   display: inline-block;
   vertical-align: top; }
+
+.constructor__forms {
+  width: 60%; }
+
+.constructor__properties {
+  width: 40%; }
 
 #handle-choose, #stoppers-choose {
   display: none; }
@@ -865,7 +870,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     content: 'да нет';
     display: block;
     position: absolute;
-    left: 70px;
+    left: 0;
     top: 10px;
     width: 80px;
     height: 2px;
@@ -877,7 +882,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     display: block;
     position: absolute;
     top: 4px;
-    left: 70px;
+    left: 0;
     width: 15px;
     height: 15px;
     background-color: #000;
@@ -886,24 +891,56 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     transition: .5s; }
 
 .constructor__form {
+  margin: 0 auto;
   text-align: center;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  background-image: url(../images/plywood.jpg); }
 
 .constructor__form-classic {
   width: 570px;
   height: 330px;
-  border-radius: 165px;
-  background-image: url(../images/plywood.jpg); }
+  border-radius: 165px; }
+
+.constructor__form-mobile {
+  width: 548px;
+  height: 286px;
+  border-radius: 143px; }
+
+.constructor__form-surf {
+  width: 590px;
+  height: 264px;
+  border-bottom-right-radius: 330px  132px;
+  border-top-right-radius: 330px  132px;
+  border-bottom-left-radius: 260px  132px;
+  border-top-left-radius: 260px  132px;
+  position: relative; }
+  .constructor__form-surf::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 70px solid transparent;
+    border-right-color: white;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    z-index: 9; }
 
 .constructor__forms-img {
   width: 100%;
   height: auto;
-  vertical-align: middle; }
+  /* margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */ }
 
 .handle {
   display: none;
@@ -920,8 +957,25 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 .constructor__properties {
   font-size: 16px; }
 
+.constructor__properties-title {
+  display: inline-block;
+  width: 100px;
+  text-transform: uppercase;
+  margin-right: 80px; }
+
 .constructor__properties-group {
-  margin-top: 40px; }
+  margin-bottom: 30px; }
+
+.constructor__properties-group-price {
+  text-align: center; }
+
+.constructor__properties-title-price {
+  font-size: 18px;
+  display: inline-block; }
+
+.constructor__properties-price {
+  font-family: "Arimo", sans-serif;
+  font-size: 24px; }
 
 .constructor__properties-rotate {
   border: none;
