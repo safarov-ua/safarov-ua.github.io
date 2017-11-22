@@ -253,7 +253,7 @@ for(var i = 0; i<rotateImg.length; i++){
 
 var imgPadding = document.querySelectorAll(".constructor__properties-padding");
 for(var j = 0; j< imgPadding.length; j++){
-	imgPadding[j].onclick = function(){
+	imgPadding[j].onchange = function(){
 		var a = this.dataset.direction;
 		if(a == "top"){
 			shape.style.paddingTop = this.value+"px";
@@ -268,6 +268,16 @@ for(var j = 0; j< imgPadding.length; j++){
 			shape.style.paddingLeft = this.value+"px";
 		}
 	}
+}
+var constructorButton = document.querySelector(".constructor__properties-button");
+var constructorOrder = document.querySelector(".constructor__order");
+var constructorOrderClose = document.querySelector(".constructor__order-close");
+
+constructorButton.onclick = function(){
+	constructorOrder.style.left = 0
+}
+constructorOrderClose.onclick = function(){
+	constructorOrder.style.left = "100%";
 }
 /*pictures in gallery*/
 $('.gallery__items').gallerify({
