@@ -433,11 +433,20 @@
 					<div class="constructor__properties-handle constructor__properties-group">
 						<span class="constructor__properties-title">Выберите форму</span>
 						<input type="radio" name="board-shape" value="classic" 
-						class="constructor__properties-shape" checked>
+						class="constructor__properties-shape"  id="classic" checked>
+						<label for="classic" class="constructor__properties-shape-img">
+							<img src="images/shapes/classic.svg" alt="classic shape" class="classic-img">
+						</label>
 						<input type="radio" name="board-shape" value="mobile" 
-  						class="constructor__properties-shape">
+  						class="constructor__properties-shape" id="mobile">
+  						<label for="mobile" class="constructor__properties-shape-img">
+  							<img src="images/shapes/mobile.svg" alt="mobile shape" class="mobile-img">
+  						</label>
   						<input type="radio" name="board-shape" value="surf" 
-  						class="constructor__properties-shape">
+  						class="constructor__properties-shape" id="surf">
+  						<label for="surf" class="constructor__properties-shape-img">
+  							<img src="images/shapes/surf.svg" alt="surf shape" class="surf-img">
+  						</label>
 					</div>
 					<div class="constructor__properties-group">
 						<span class="constructor__properties-title">Загрузить изображение</span>
@@ -446,9 +455,12 @@
 					<div class="constructor__properties-group">
 						<span class="constructor__properties-title">Растянуть</span>
 						<input type="radio" name="image-size" value="width" 
-						class="constructor__properties-size" checked>По всей ширине
+						class="constructor__properties-size" 
+						id="constructor__properties-width" checked>
+						<label for="constructor__properties-width" class="constructor-width constructor-stretch">По ширине</label>
   						<input type="radio" name="image-size" value="height" 
-  						class="constructor__properties-size">По всей высоте<br>
+  						class="constructor__properties-size" id="constructor__properties-height">
+  						<label for="constructor__properties-height" class="constructor-height constructor-stretch">По высоте</label>
 					</div>
 					<div class="constructor__properties-group">
 						<span class="constructor__properties-title">Повернуть</span>
@@ -461,9 +473,13 @@
 					</div>
 					<div class="constructor__properties-group">
 						<span class="constructor__properties-title">Отступы</span>
+						<i class="fa fa-long-arrow-down" aria-hidden="true"></i>
 						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="top" step="10">
+						<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
 						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="bottom" step="10">
+						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="left" step="10">
+						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
 						<input type="number" value="0" min="0" max="150" class="constructor__properties-padding" data-direction="right" step="10">
 					</div>
 					<div class="constructor__properties-handle constructor__properties-group">
@@ -479,9 +495,12 @@
 					<div class="constructor__properties-group-price">
 						<span class="constructor__properties-title-price">Цена:</span>
 						<span class="constructor__properties-price">1240 грн</span>
-						<button class="constructor__properties-button">В корзину</button>
+						<button class="constructor__properties-button">Заказать</button>
 					</div>
 
+				</div>
+				<div class="constructor__order">
+					
 				</div>
 			</div>
 		</div>
