@@ -167,7 +167,8 @@ var shapeVariations = document.querySelectorAll(".constructor__properties-shape"
 var handleChoose = document.querySelector("#handle-choose");
 var stoppersChoose = document.querySelector("#stoppers-choose");
 var constructorImg = document.querySelector(".constructor__properties-img");
-var price = 1000;
+var constructorPrice = document.querySelector(".constructor__properties-price");
+var price = 100;
 
 
 for(var j = 0; j<shapeVariations.length; j++){ //shape choose
@@ -175,18 +176,31 @@ for(var j = 0; j<shapeVariations.length; j++){ //shape choose
 		var shapeActive = shape.classList[1];
 		shape.classList.remove(shapeActive);
 		shape.classList.add("constructor__form-"+this.value);
+		if(this.value == "classic"){
+			constructorPrice.innerHTML = 1300 + price;
+		}
+		else if(this.value == "mobile"){
+			constructorPrice.innerHTML = 1200 + price;
+		}
+		else if(this.value == "surf"){
+			constructorPrice.innerHTML = 1600 + price;
+		}
 	}
+
 }
 
 
 handleChoose.onchange = function(){
 	var handle = document.querySelector(".handle");
 	if(handleChoose.checked == true){
-		handle.style.display = "block";		
+		handle.style.display = "block";
+		price += 100;		
 	}
 	else{
 		handle.style.display = "none";
+		price -= 100;
 	}
+	constructorPrice.innerHTML = price;
 }
 stoppersChoose.onchange = function(){
 	if(stoppersChoose.checked == true){
@@ -195,6 +209,7 @@ stoppersChoose.onchange = function(){
 	else{
 		price -= 100;
 	}
+	constructorPrice.innerHTML = price;
 }
 var boardImg = document.querySelector(".constructor__forms-img");
 
@@ -209,10 +224,10 @@ var degress = 0;
 rotateRight.onclick = function(){
 	var boardImgSrc = boardImg.getAttribute("src");
 	if(boardImgSrc == ''){
-		console.log(degress);
+		
 	}
 	else{
-		console.log(degress);
+		
 		degress += 90;
 		degress == 360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
