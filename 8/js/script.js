@@ -200,7 +200,7 @@ handleChoose.onchange = function(){
 		handle.style.display = "none";
 		price -= 100;
 	}
-	constructorPrice.innerHTML = price;
+	
 }
 stoppersChoose.onchange = function(){
 	if(stoppersChoose.checked == true){
@@ -209,7 +209,7 @@ stoppersChoose.onchange = function(){
 	else{
 		price -= 100;
 	}
-	constructorPrice.innerHTML = price;
+	
 }
 var boardImg = document.querySelector(".constructor__forms-img");
 
@@ -231,17 +231,14 @@ rotateRight.onclick = function(){
 		degress += 90;
 		degress == 360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
-		console.log(degress)
 	}
 }
 
 rotateLeft.onclick = function(){
 	var boardImgSrc = boardImg.getAttribute("src");
 	if(boardImgSrc == ''){
-		console.log(degress);
 	}
 	else{
-		console.log(degress);
 		degress -= 90;
 		degress == -360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
@@ -292,7 +289,7 @@ constructorButton.onclick = function(){
 	constructorOrder.style.left = 0
 }
 constructorOrderClose.onclick = function(){
-	constructorOrder.style.left = "100%";
+	constructorOrder.style.left = "2000px";
 }
 /*pictures in gallery*/
 $('.gallery__items').gallerify({
