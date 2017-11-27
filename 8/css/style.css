@@ -1117,7 +1117,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   padding: 50px 60px 50px;
   line-height: 20px;
   color: #b5b5b5;
-  height: 400px;
+  max-height: 400px;
   overflow-y: auto; }
 
 .about__left img {
@@ -1406,7 +1406,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     width: 65%; }
 
   .about__left p {
-    padding: 10px 20px 50px 10px; } }
+    padding: 10px 20px 40px 10px; } }
 @media screen and (max-width: 768px) {
   .header__video {
     display: none; }
