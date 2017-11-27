@@ -169,7 +169,7 @@ var stoppersChoose = document.querySelector("#stoppers-choose");
 var constructorImg = document.querySelector(".constructor__properties-img");
 var constructorPrice = document.querySelector(".constructor__properties-price");
 var price = 100;
-
+var shapePrice = 1300;
 
 for(var j = 0; j<shapeVariations.length; j++){ //shape choose
 	shapeVariations[j].onchange = function(){
@@ -177,16 +177,16 @@ for(var j = 0; j<shapeVariations.length; j++){ //shape choose
 		shape.classList.remove(shapeActive);
 		shape.classList.add("constructor__form-"+this.value);
 		if(this.value == "classic"){
-			constructorPrice.innerHTML = 1300 + price;
+			shapePrice = 1300;
 		}
 		else if(this.value == "mobile"){
-			constructorPrice.innerHTML = 1200 + price;
+			shapePrice = 1200;
 		}
 		else if(this.value == "surf"){
-			constructorPrice.innerHTML = 1600 + price;
+			shapePrice = 1600;
 		}
+	constructorPrice.innerHTML = shapePrice+price;
 	}
-
 }
 
 
@@ -200,7 +200,7 @@ handleChoose.onchange = function(){
 		handle.style.display = "none";
 		price -= 100;
 	}
-	
+	constructorPrice.innerHTML = shapePrice+price;
 }
 stoppersChoose.onchange = function(){
 	if(stoppersChoose.checked == true){
@@ -209,7 +209,7 @@ stoppersChoose.onchange = function(){
 	else{
 		price -= 100;
 	}
-	
+	constructorPrice.innerHTML = shapePrice+price;
 }
 var boardImg = document.querySelector(".constructor__forms-img");
 
@@ -221,29 +221,16 @@ constructorImg.oninput = function(){
 var rotateRight = document.querySelector(".constructor__properties-right");
 var rotateLeft = document.querySelector(".constructor__properties-left");
 var degress = 0;
-rotateRight.onclick = function(){
-	var boardImgSrc = boardImg.getAttribute("src");
-	if(boardImgSrc == ''){
-		
-	}
-	else{
-		
+rotateRight.onclick = function(){		
 		degress += 90;
 		degress == 360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
-	}
 }
 
 rotateLeft.onclick = function(){
-	var boardImgSrc = boardImg.getAttribute("src");
-	if(boardImgSrc == ''){
-	}
-	else{
 		degress -= 90;
 		degress == -360 ? degress = 0 : degress = degress;
 		boardImg.style.transform = "rotate("+degress+"deg)";
-
-	}
 }
 
 var rotateImg = document.querySelectorAll(".constructor__properties-size");
