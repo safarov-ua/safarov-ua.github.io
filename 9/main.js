@@ -14,7 +14,7 @@ function Square(){
 	/*create random square*/
 	this.x = Math.floor(Math.random()*((canvas.clientWidth-20)+1));
 	this.y =0;
-	this.speed = Math.floor(1 + Math.random()*(5+1));
+	this.speed = Math.floor(1 + Math.random()*(6+1 - 1));
 	this.color = "rgb("+Math.floor(Math.random()*(255+1))+","+Math.floor(Math.random()*(255+1)) + 
 	","+Math.floor(Math.random()*(255+1))+")";
 
@@ -31,7 +31,7 @@ function animate() {
 	counter++;
 	if(counter==60){
 		squareCreate = setTimeout(function(){var square = new Square()},
-		Math.floor(150+Math.random()*(1200)));
+		Math.floor(150+Math.random()*(1200 - 150)));
 		counter=0;
 	}
 
