@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Swieze ryby</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,700|Montserrat:200,400,700" 
+	rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-4/bootstrap.min.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="loader">
+		<div class="circle"></div>
+	</div>
+	<header class="header">
+		<div class="header__top" id="top">
+			<a class="logo" href="#">
+				<span class="logo-bold">swieze</span>ryby.<span class="logo-light">com</span>
+			</a>
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item"><a class="navigation__link" href="#">home</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">o nas</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">asortyment</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">współpraca</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">kontakt</a></li>
+					<li class="navigation__item">
+						<a class="navigation__tel btn" href="tel:500 110 110">tel. 500 110 110</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__bottom">
+			<h1 class="header__title">świeże ryby</h1>
+			<p class="header__text">Zobacz, co jeszcze oferujemy!</p>
+		</div>
+
+	</header>
+	<main class="main">
+		<section class="about">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-10 col-lg-5 offset-md-1 offset-lg-0">
+						<h2 class="about__title">o nas</h2>
+						<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id. Aenean imperdiet diam nec efficitur commodo. Morbi at purus tempus tellus tempus placerat. Sed faucibus sed elit at lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent posuere orci justo, eu fermentum quam cursus quis. Proin consequat molestie magna accumsan placerat. Nulla quis consectetur tortor. Nam viverra consectetur risus iaculis ultrices. </p>
+						<span class="about__tel">TEL. 500 110 110</span>
+						<button class="about__btn btn">historia <br>naszej firmy</button>
+					</div>
+					<div class="col-md-10 col-lg-6 offset-md-1 offset-lg-1">
+						<div class="about__photo">
+							<img src="img/about.jpg" alt="nasz sklep" >
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="assortment">
+			<div class="assortment__inner">
+				<h2 class="assortment__title">asortyment</h2>
+				<p class="assortment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id. Aenean imperdiet diam nec efficitur commodo. Morbi at purus tempus tellus tempus placerat. Sed faucibus sed elit at lacinia.</p>
+				<div class="assortment__slider">
+					<div class="assortment__product">
+						<a class="product__link" href="#">
+							<img class="product__image" src="img/dorado.jpg" alt="">
+							<div class="product__description">
+								<h3 class="product__title">dorada świeża</h3>
+								<h4 class="product__price">14,99 zł/kg</h4>
+								<button class="product__button btn btn-reverse">zamów</button>
+							</div>
+						</a>
+					</div>
+					<div class="assortment__product">
+						<a class="product__link" href="#">
+							<img class="product__image" src="img/trout.jpg" alt="">
+							<div class="product__description">
+								<h3 class="product__title">pstrąg patroszony</h3>
+								<h4 class="product__price">20,99 zł/kg</h4>
+								<button class="product__button btn btn-reverse">zamów</button>
+							</div>
+						</a>
+					</div>
+					<div class="assortment__product">
+						<a class="product__link" href="#">
+							<img class="product__image" src="img/shrimp.jpg" alt="">
+							<div class="product__description">
+								<h3 class="product__title">krewetki tygrysie</h3>
+								<h4 class="product__price">39,99 zł/kg</h4>
+								<button class="product__button btn btn-reverse">zamów</button>
+							</div>
+						</a>
+					</div>
+					<div class="assortment__product">
+						<a class="product__link" href="#">
+							<img class="product__image" src="img/mackerel.jpg" alt="">
+							<div class="product__description">
+								<h3 class="product__title">makrela wędzona</h3>
+								<h4 class="product__price">5,99 zł/szt</h4>
+								<button class="product__button btn btn-reverse">zamów</button>
+							</div>
+						</a>
+					</div>
+					<div class="assortment__product">
+						<a class="product__link" href="#">
+							<img class="product__image" src="img/shrimp.jpg" alt="">
+							<div class="product__description">
+								<h3 class="product__title">krewetki tygrysie</h3>
+								<h4 class="product__price">39,99 zł/kg</h4>
+								<button class="product__button btn btn-reverse">zamów</button>
+							</div>
+						</a>
+					</div>
+				</div>
+				<button class="assortment__button btn">zobacz cały <br> asortyment</button>
+			</div>
+		</section>
+		<section class="advantages">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 advantage">
+						<div class="advantage__img advantage__img-pan"></div>
+						<h3 class="advantage__title">catering</h3>
+						<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id.</p>
+					</div>
+					<div class="col-lg-4 advantage">
+						<div class="advantage__img advantage__img-fish"></div>
+						<h3 class="advantage__title">sprzedaż</h3>
+						<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id.</p>
+					</div>
+					<div class="col-lg-4 advantage">
+						<div class="advantage__img advantage__img-shrimp"></div>
+						<h3 class="advantage__title">dostawy</h3>
+						<p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id.</p>
+					</div>
+				</div>
+			</div>
+			<button class="advantages__button btn">sprawdź <br> możliwości</button>
+		</section>
+		<section class="contacts">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-md-7 col-lg-7  contacts__map"></div>
+							<div class="col-sm-12 col-md-5 col-lg-5  contacts__overlay">
+							<h3 class="contacts__title">kontakt</h3>
+							<p class="contacts__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie egestas massa, et sollicitudin urna mattis faucibus. Praesent sagittis laoreet est, et efficitur enim lacinia id. Aenean imperdiet diam nec efficitur commodo. Morbi at purus tempus tellus tempus placerat. Sed faucibus sed elit at lacinia.</p>
+							<button class="contacts__button btn btn-reverse">kontakt</button>
+						</div>
+					</div>
+			
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer-nav">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<h4 class="footer-nav__title">o nas</h4>
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item"><a href="" class="footer-nav__link">O nas</a></li>
+							<li class="footer-nav__item"><a href="" class="footer-nav__link">Asortyment</a></li>
+							<li class="footer-nav__item"><a href="" class="footer-nav__link">Współpraca</a></li>
+							<li class="footer-nav__item"><a href="" class="footer-nav__link">Kontakt</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<h4 class="footer-nav__title">współpraca</h4>
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item">
+								<a href="" class="footer-nav__link">Warunki współpracy</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="" class="footer-nav__link">Cennik</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="" class="footer-nav__link">Umowy</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="" class="footer-nav__link">Dostawy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<h4 class="footer-nav__title">godziny otwarcia</h4>
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item"><b>Pon. - Wt.</b> 6:00 - 19:00</li>
+							<li class="footer-nav__item"><b>Śr. - Pt.</b> 6:00 - 18:00</li>
+							<li class="footer-nav__item"><b>Sobota</b> 6:00 - 16:00</li>
+							<li class="footer-nav__item"><b>Niedziela i święta</b> 7:00 - 14:00</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<h4 class="footer-nav__title">kontakt</h4>
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item">ul. Upalna 99</li>
+							<li class="footer-nav__item">15-600 Białystok</li>
+							<li class="footer-nav__item">tel. <b>500 110 110</b></li>
+							<li class="footer-nav__item">e-mail <b>sklep@swiezeryby.com</b></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="copyright__inner">
+				<span class="copyright__text">&#169; swiezeryby.com 2016</span>
+				<a class="copyright__text copyright__up" href="#top">w górę</a>
+			</div>
+		</div>
+	</footer>
+	<script src="jquery/jquery.min.js"></script>
+	<script src="bootstrap-4/bootstrap.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQPNBNc6U86nMQIJNWs1IpE5srnMfJNCw&callback=initMap" 
+	async defer></script>
+	<script src="script.js"></script>
+	
+</body>
+</html>
