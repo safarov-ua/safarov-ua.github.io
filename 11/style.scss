@@ -523,7 +523,16 @@ h2,h3,h4,h5,h6{
 	}
 }
 
-
+@media screen and (max-width: 1200px){
+	.slick-prev{
+		left: -15px;
+		border: none;
+	}
+	.slick-next{
+		right: -18px;
+		border: none;
+	}
+}
 @media screen and (max-width: 992px) {
 	.logo{
 		display: block;
@@ -579,8 +588,8 @@ h2,h3,h4,h5,h6{
 	}
 	.contacts__overlay{
 		height: auto;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding: 0 15px;
+		text-align: center;
 		&::after{
 			width: 0;
 			height: 0;
