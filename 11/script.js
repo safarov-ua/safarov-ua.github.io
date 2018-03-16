@@ -15,7 +15,7 @@ window.onload = function(){
       	autoplay: true,
       	arrows: false,
         slidesToShow: 3,
-				
+				dots: true,
       }
     },
     {
@@ -24,6 +24,7 @@ window.onload = function(){
       	autoplay: true,
       	arrows: false,
         slidesToShow: 2,
+        dots: true,
       }
     },
     {
@@ -31,6 +32,7 @@ window.onload = function(){
     	settings:{
     		arrows: false,
     		slidesToShow: 1,
+    		dots: true,
     	}
     },
     ]
