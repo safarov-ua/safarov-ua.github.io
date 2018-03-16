@@ -551,7 +551,7 @@ h2, h3, h4, h5, h6 {
 
   .contacts__overlay {
     height: auto;
-    padding: 0 15px;
+    padding: 15px 0;
     text-align: center; }
     .contacts__overlay::after {
       width: 0;
