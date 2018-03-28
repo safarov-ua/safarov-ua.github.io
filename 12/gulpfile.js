@@ -1,10 +1,10 @@
-var gulp 		 = require('gulp'),
-	sass 		 = require('gulp-sass'),
-	concat 		 = require('gulp-concat'),
-	browserSync  = require('browser-sync'),
-	del			 = require('del'),
-	imagemin     = require('gulp-imagemin'),
-	pngquant     = require('imagemin-pngquant'),
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	concat = require('gulp-concat'),
+	browserSync = require('browser-sync'),
+	del = require('del'),
+	imagemin = require('gulp-imagemin'),
+	pngquant = require('imagemin-pngquant'),
 	autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function(){
