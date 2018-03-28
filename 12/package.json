@@ -16,7 +16,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.2.1",
-    "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.1.0"
   }
 }
