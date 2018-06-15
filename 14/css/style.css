@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'ExposureThreeC';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ExposureThreeC.otf") format("opentype"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  min-width: 320px; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1900px;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  background-image: url(../img/parts/aside-bg-left.png), url(../img/parts/aside-bg-right.png);
+  background-repeat: repeat-y;
+  background-position: top left, top right;
+  background-size: 25px; }
+  @media (min-width: 480px) {
+    .wrapper {
+      background-size: 70px; } }
+  @media (min-width: 768px) {
+    .wrapper {
+      background-size: 100px; } }
+  @media (min-width: 1024px) {
+    .wrapper {
+      background-size: 140px; } }
+  @media (min-width: 1200px) {
+    .wrapper {
+      background-size: 190px; } }
+
+.header__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 180px;
+  background-image: url(../img/parts/header-bg.png);
+  background-repeat: repeat-x;
+  background-position: center; }
+  @media (min-width: 480px) {
+    .header__inner {
+      height: 220px; } }
+  .header__inner::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    display: block;
+    top: 10px;
+    left: 30px;
+    width: 80px;
+    height: 70px;
+    background-image: url(../img/parts/sun.png);
+    background-size: cover; }
+  .header__inner::before {
+    position: absolute;
+    z-index: 4;
+    display: block;
+    bottom: -30px;
+    right: 90px;
+    width: 232px;
+    height: 75px;
+    background-image: url(../img/parts/train.png);
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .header__inner::before {
+        content: ""; } }
+    @media (min-width: 1024px) {
+      .header__inner::before {
+        right: 120px; } }
+    @media (min-width: 1200px) {
+      .header__inner::before {
+        width: 300px;
+        height: 96px; } }
+
+.header__text {
+  width: 300px;
+  height: auto;
+  z-index: 9;
+  margin: 0; }
+  @media (min-width: 480px) {
+    .header__text {
+      width: 450px; } }
+  @media (min-width: 768px) {
+    .header__text {
+      margin-right: 100px; } }
+  @media (min-width: 1024px) {
+    .header__text {
+      width: 500px;
+      margin-right: 150px; } }
+  @media (min-width: 1200px) {
+    .header__text {
+      width: 600px; } }
+
+.header__logo {
+  width: 110px;
+  height: 110px;
+  margin-top: 10px; }
+  @media (min-width: 480px) {
+    .header__logo {
+      width: 150px;
+      height: 150px; } }
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px; }
+  @media (min-width: 768px) {
+    .content {
+      padding: 0 100px; } }
+  @media (min-width: 1024px) {
+    .content {
+      padding: 0 190px; } }
+  .content::after {
+    position: absolute;
+    z-index: 4;
+    display: block;
+    top: -145px;
+    left: 50px;
+    width: 150px;
+    height: 175px;
+    background-image: url(../img/parts/tree.png);
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .content::after {
+        content: ""; } }
+    @media (min-width: 1024px) {
+      .content::after {
+        top: -120px;
+        width: 180px;
+        height: 210px; } }
+    @media (min-width: 1200px) {
+      .content::after {
+        width: 220px;
+        height: 258px; } }
+  .content::before {
+    position: absolute;
+    z-index: 4;
+    display: block;
+    top: -110px;
+    right: 0;
+    width: 100px;
+    height: 192px;
+    z-index: 9;
+    background-image: url(../img/parts/sunwcloud.png);
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .content::before {
+        content: ""; } }
+    @media (min-width: 1024px) {
+      .content::before {
+        width: 130px;
+        height: 250px; } }
+
+.menu {
+  padding-top: 25px;
+  text-align: center; }
+  .menu__list {
+    list-style: none; }
+  .menu__item {
+    display: block;
+    margin: 10px 15px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .menu__item {
+        display: inline-block; } }
+    @media (min-width: 1024px) {
+      .menu__item {
+        margin: 10px 25px; } }
+  @media (min-width: 768px) {
+    .menu__item:first-child {
+      margin-left: 0; } }
+  @media (min-width: 768px) {
+    .menu__item:last-child {
+      margin-right: 0; } }
+  .menu__link {
+    display: block;
+    margin: 0 auto;
+    width: 155px;
+    padding: 5px;
+    font-family: 'ExposureThreeC', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: #f0ff00;
+    color: #000cff;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #000cff;
+    -webkit-box-shadow: inset 5px 5px 4px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 5px 5px 4px 4px rgba(0, 0, 0, 0.6);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .menu__link:hover {
+      -webkit-box-shadow: inset 4px 4px 3px 3px rgba(0, 0, 0, 0.6);
+              box-shadow: inset 4px 4px 3px 3px rgba(0, 0, 0, 0.6); }
+    @media (min-width: 1024px) {
+      .menu__link {
+        font-size: 22px;
+        width: 175px; } }
+    .menu__link--active {
+      background-color: #ff7f1c; }
+
+.footer {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+  .footer::after {
+    position: absolute;
+    display: block;
+    width: 126px;
+    height: 110px;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/parts/rounds.png);
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .footer::after {
+        content: ""; } }
+    @media (min-width: 1024px) {
+      .footer::after {
+        width: 150px;
+        height: 130px; } }
