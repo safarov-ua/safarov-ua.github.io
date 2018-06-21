@@ -21,7 +21,7 @@
           align-items: center;
   margin: 0 auto;
   padding: 0 15px;
-  height: 180px;
+  height: 130px;
   background-image: url(../img/parts/header-bg.png);
   background-repeat: repeat-x;
   background-position: center; }
@@ -36,7 +36,7 @@
     top: 10px;
     left: 30px;
     width: 80px;
-    height: 70px;
+    height: 72px;
     background-image: url(../img/parts/sun.png);
     background-size: cover; }
   .header__inner::before {
@@ -129,6 +129,20 @@ body {
   @media (min-width: 1200px) {
     .wrapper {
       background-size: 190px; } }
+
+.bottom-figure {
+  position: absolute;
+  display: none;
+  width: 126px;
+  height: auto;
+  right: 0;
+  bottom: 0; }
+  @media (min-width: 768px) {
+    .bottom-figure {
+      display: block; } }
+  @media (min-width: 1024px) {
+    .bottom-figure {
+      width: 150px; } }
 
 .content {
   -webkit-box-flex: 1;
@@ -312,64 +326,118 @@ body {
       .about__subtitle {
         font-size: 22px; } }
 
-.sliders .slider {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 15px;
-  overflow: hidden; }
-  .sliders .slider__title {
-    padding: 10px 0 20px;
-    text-align: center;
-    color: #ff0000;
-    font-size: 18px; }
+.sliders {
+  position: relative; }
+  .sliders::after {
+    position: absolute;
+    top: 90px;
+    right: -190px;
+    width: 193px;
+    height: 140px;
+    background-image: url(../img/parts/hameleon.png);
+    background-size: cover; }
     @media (min-width: 768px) {
-      .sliders .slider__title {
-        font-size: 22px; } }
+      .sliders::after {
+        content: ''; } }
+  .sliders::before {
+    position: absolute;
+    top: 55px;
+    left: -90px;
+    width: 100px;
+    height: 218px;
+    background-image: url(../img/parts/pictures.png);
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .sliders::before {
+        content: ''; } }
+  .sliders .slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px; }
+    .sliders .slider__title {
+      padding: 10px 0 20px;
+      text-align: center;
+      color: #ff0000;
+      font-size: 18px; }
+      @media (min-width: 768px) {
+        .sliders .slider__title {
+          font-size: 22px; } }
   @media (min-width: 768px) and (min-width: 1024px) {
     .sliders .slider__title {
       font-size: 24px; } }
-  .sliders .slider__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    @media (min-width: 768px) {
-      .sliders .slider__box {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start; } }
-  .sliders .slider__items {
-    position: relative;
-    width: 70%; }
-    @media (min-width: 768px) {
-      .sliders .slider__items {
-        width: 50%;
-        padding-right: 30px; } }
-  .sliders .slider__img {
-    outline: none; }
-    .sliders .slider__img img {
-      width: 100%;
-      height: auto; }
-  .sliders .slider__text {
-    font-size: 16px;
-    padding-top: 10px; }
-    @media (min-width: 768px) {
-      .sliders .slider__text {
-        padding-left: 30px; } }
-    .sliders .slider__text span {
-      display: block;
-      text-indent: 15px; }
+    .sliders .slider__box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      @media (min-width: 768px) {
+        .sliders .slider__box {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start; } }
+    .sliders .slider__items {
+      position: relative;
+      width: 70%; }
+      @media (min-width: 768px) {
+        .sliders .slider__items {
+          width: 50%;
+          padding: 0 50px; } }
+      .sliders .slider__items .slick-prev,
+      .sliders .slider__items .slick-next {
+        top: 70px;
+        width: 20px;
+        height: 39px;
+        z-index: 1;
+        text-indent: -9999px;
+        background-image: url(../img/parts/arrow.png);
+        background-position: top;
+        background-size: cover; }
+        .sliders .slider__items .slick-prev:hover,
+        .sliders .slider__items .slick-next:hover {
+          background-position: bottom; }
+      .sliders .slider__items .slick-prev {
+        left: -40px;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0); }
+        @media (min-width: 768px) {
+          .sliders .slider__items .slick-prev {
+            left: -10px; } }
+      .sliders .slider__items .slick-next {
+        right: -40px;
+        -webkit-transform: scale(-1, 1);
+            -ms-transform: scale(-1, 1);
+                transform: scale(-1, 1); }
+        @media (min-width: 768px) {
+          .sliders .slider__items .slick-next {
+            right: -10px; } }
+    .sliders .slider__img {
+      outline: none; }
+      .sliders .slider__img img {
+        width: 100%;
+        height: auto; }
+    .sliders .slider__text {
+      font-size: 16px;
+      padding-top: 10px;
+      width: 100%; }
+      @media (min-width: 768px) {
+        .sliders .slider__text {
+          padding-left: 50px;
+          width: 50%; } }
+      .sliders .slider__text span {
+        display: block;
+        text-indent: 15px; }
 
 .contacts {
   position: relative;
@@ -458,19 +526,3 @@ body {
     @media (min-width: 768px) {
       .footer__content {
         height: 200px; } }
-  .footer::after {
-    position: absolute;
-    display: block;
-    width: 126px;
-    height: 110px;
-    right: 0;
-    bottom: 0;
-    background-image: url(../img/parts/rounds.png);
-    background-size: cover; }
-    @media (min-width: 768px) {
-      .footer::after {
-        content: ""; } }
-    @media (min-width: 1024px) {
-      .footer::after {
-        width: 150px;
-        height: 130px; } }
